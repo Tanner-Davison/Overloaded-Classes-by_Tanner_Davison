@@ -13,8 +13,13 @@ Entity::Entity(const Entity& other)
 	: mainMember(other.mainMember), age(other.age), instance(++count), entityPtr(new double(*other.entityPtr)), location(other.location) {
 	cout << "Copy Constructor Invoked #: " << count << "\n";
 }
-
-//delete pointer
+//Move Constructor
+Entity::Entity(Entity&& other) noexcept
+	: age(other.age), mainMember(other.mainMember), instance(++count), entityPtr(new double(*other.entityPtr)), location(other.location)
+{
+	cout << "Move Constructor Invoked\n";
+}
+//delete pointers memory set to null
 Entity::~Entity() {
 	if (this->entityPtr != nullptr) {
 		delete entityPtr;
@@ -27,15 +32,8 @@ Entity& Entity::operator++() {
 	return *this;
 }
 
-Entity Entity::operator+ (const Entity& other) const {
-	Entity result;
-	result.setMainMember(this->mainMember + other.mainMember);
-	result.setAge(this->age + other.age);
-	return result;
-}
 
-
-//postfix increment;
+//postfix increment++;
 Entity Entity::operator++(int) {
 	Entity temp = *this;
 	++(*this);
@@ -55,8 +53,12 @@ Entity Entity::operator--(int) {
 	--(*this);
 	return *this;
 }
+//arithmatic operator overload;
+Entity Entity::operator+ (const Entity& other) const {
+	return Entity(this->age + other.age, this->mainMember + other.mainMember, *this->entityPtr + *other.entityPtr, location + other.location);
 
-//copy assignment overloading
+}
+//copy assignment operator overloading
 Entity& Entity::operator=(const Entity& other) {
 	if (this == &other) {
 		return *this;
@@ -75,6 +77,8 @@ Entity Entity::add(const Entity& other) const {
 	Entity temp;
 	temp.setMainMember(this->mainMember + other.mainMember);
 	temp.setAge(this->age + other.age);
+	*temp.entityPtr = *this->entityPtr + *other.entityPtr;
+	temp.location = this->location + other.location;
 	return temp;
 }
 
@@ -154,4 +158,50 @@ Vector2D Vector2D::operator+(const Vector2D& other)const {
 }
 void Vector2D::readLocation()const {
 	cout << "location X: " << this->x << " location Y: " << this->y << "\n";
+}
+
+
+//overloaded constructor
+ArrayList::ArrayList(int lengthP) : length(lengthP), list(new char[lengthP]) {
+	list = new char[length];
+
+	for (int i = 0; i < length; i++) {
+		list[i] = 'X';
+	}
+	cout << "ArrayList Created with default Constructor\n";
+}
+//Copy constructor
+ArrayList::ArrayList(const ArrayList& other) :length(other.length), list(new char[other.length]) {
+	for (int i = 0; i < other.length; i++) {
+		this->list[i] = other.list[i];
+	}
+	cout << "ArrayList Created with copy constructor\n";
+}
+//Destructure
+ArrayList::~ArrayList() {
+	if (this->list != nullptr) {
+		delete[] list;
+		list = nullptr;
+	}
+}
+//Assaignment operator 
+ArrayList& ArrayList::operator=(const ArrayList& other) {
+	if (this == &other) {
+		return *this;
+	}
+	delete[] this->list;
+
+	this->length = other.length;
+	this->list = new char[length];
+	for (int i = 0; i < length; i++) {
+		this->list[i] = other.list[i];
+	}
+	cout << "ArrayList was assaigned to another ArrayList variable\n";
+	return *this;
+}
+void ArrayList::printList()const {
+	for (int i = 0; i < this->length; i++) {
+		cout << this->list[i];
+	}
+	cout << endl;
 }

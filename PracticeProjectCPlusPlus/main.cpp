@@ -7,27 +7,28 @@ const string& getProgramName() {
 	const static string programName{ "Hello world how are you?" };
 	return programName;
 }
-void toString(Entity& other) {
+void static toString(Entity& other) {
 	cout << "Pointer of classType Entity: " << other.getPointer() << "\n\n";
+}
+
+void test(const int& x) {
+	cout << "L Value Reference" << endl;
+}
+void test(int&& x) {
+	cout << "R Value Reference" << endl;
+}
+Entity createEntity() {
+	return Entity();
 }
 int main() {
 
-	Vector2D loc{ 100.32, 100.33 };
-	Vector2D loc2{ 23.33, 23.22 };
-	Vector2D loc3 = loc + loc2 + loc2;
+	Entity e1{};
+	Entity e2 = createEntity();
+	e1 = createEntity();
+	e2.toString();
 
-	Entity eOne{ 5, 50, 43.3, loc };
-	Entity eTwo{ 2, 2, 3.33 , loc2 };
+	e1.toString();
 
-	eOne.setLocation(eOne.getLocation().addToSelf(loc2));
-	eOne.getLocation().readLocation();
-	loc3.readLocation();
-
-	Entity totals = eOne = eTwo;
-
-	eOne.toString();
-	eTwo.toString();
-	totals.toString();
 
 
 	return 0;

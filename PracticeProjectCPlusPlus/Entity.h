@@ -11,6 +11,18 @@ struct Vector2D {
 	void readLocation() const;
 };
 
+class ArrayList {
+public:
+	ArrayList(int lengthP = 1);
+	~ArrayList();
+	ArrayList& operator=(const ArrayList& other);
+	ArrayList(const ArrayList& other);
+	void printList()const;
+private:
+	char* list;
+	int length;
+};
+
 class Entity {
 public:
 
@@ -18,7 +30,8 @@ public:
 
 	//copy constructor
 	Entity(const Entity& other);
-
+	//move constructor
+	Entity(Entity&& other)noexcept;
 	~Entity();
 
 	//overloaded operators
