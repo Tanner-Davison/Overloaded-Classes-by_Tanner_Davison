@@ -12,15 +12,23 @@ void toString(Entity& other) {
 }
 int main() {
 
-	Entity eOne{ 5, 50, 43.3 }, eTwo{ 6 };
+	Vector2D loc{ 100.32, 100.33 };
+	Vector2D loc2{ 23.33, 23.22 };
+	Vector2D loc3 = loc + loc2 + loc2;
 
-	Vector2D loc{ 200.32, 100.32 };
+	Entity eOne{ 5, 50, 43.3, loc };
+	Entity eTwo{ 2, 2, 3.33 , loc2 };
 
-	eOne.setLocation(loc);
-	cout << eOne.getLocation().x << " " << eOne.getLocation().y << "\n";
+	eOne.setLocation(eOne.getLocation().addToSelf(loc2));
+	eOne.getLocation().readLocation();
+	loc3.readLocation();
 
-	Entity totals = eOne;
-	cout << "TESTING: " << totals.getLocation().x << " " << totals.getLocation().y << "\n";
+	Entity totals = eOne = eTwo;
+
+	eOne.toString();
+	eTwo.toString();
+	totals.toString();
+
 
 	return 0;
 }

@@ -1,16 +1,20 @@
 #pragma once
 
 struct Vector2D {
-	Vector2D(double pX = 1, double pY = 1) :x{ pX }, y{ pY } {};
-
 	double x;
 	double y;
+	Vector2D(double pX = 0.0, double pY = 0.0) :x{ pX }, y{ pY } {};
+	Vector2D operator=(const Vector2D& other);
+	Vector2D addToSelf(const Vector2D& other);
+	Vector2D operator+(const Vector2D& other)const;
+
+	void readLocation() const;
 };
 
 class Entity {
 public:
 
-	Entity(int pAge = 1, int pMainMember = 1, double pPtr = 0.0, Vector2D pVec = Vector2D());
+	Entity(int pAge = 0, int pMainMember = 0, double pPtr = 0.0, Vector2D pVec = Vector2D());
 
 	//copy constructor
 	Entity(const Entity& other);
@@ -24,6 +28,7 @@ public:
 	Entity operator--(int);
 	Entity operator+(const Entity& other)const;
 	Entity operator*(const Entity& other)const;
+	Entity& operator=(const Entity& other);
 	bool operator==(const Entity& other)const;
 
 	Entity multiply(const Entity& other) const;

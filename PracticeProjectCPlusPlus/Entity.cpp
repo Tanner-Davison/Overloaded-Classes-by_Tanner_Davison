@@ -5,18 +5,21 @@ using namespace std;
 
 Entity::Entity(int pAge, int pMainMember, double pPtr, Vector2D vec)
 	: age(pAge), mainMember(pMainMember), instance(++count), entityPtr(new double(pPtr)), location(vec) {
-	cout << "Constructor invoked\n Instance Count: " << count << "\n";
+	cout << "Constructor invoked #:  " << this->instance << "\n";
 }
 
 //copy Constructor
 Entity::Entity(const Entity& other)
 	: mainMember(other.mainMember), age(other.age), instance(++count), entityPtr(new double(*other.entityPtr)), location(other.location) {
-	cout << "Copy Constructor Invoked \n";
+	cout << "Copy Constructor Invoked #: " << count << "\n";
 }
 
 //delete pointer
 Entity::~Entity() {
-	delete entityPtr;
+	if (this->entityPtr != nullptr) {
+		delete entityPtr;
+		this->entityPtr = nullptr;
+	}
 }
 //prefix increment;
 Entity& Entity::operator++() {
@@ -50,6 +53,20 @@ Entity& Entity::operator--() {
 Entity Entity::operator--(int) {
 	Entity temp = *this;
 	--(*this);
+	return *this;
+}
+
+//copy assignment overloading
+Entity& Entity::operator=(const Entity& other) {
+	if (this == &other) {
+		return *this;
+	}
+	delete entityPtr;
+	mainMember = other.mainMember;
+	this->entityPtr = new double(*other.entityPtr);
+	this->location = other.location;
+	this->age = other.age;
+	cout << "copy assaignment overload invoked #: " << count << "\n";
 	return *this;
 }
 
@@ -109,11 +126,32 @@ void Entity::setAge(int pAge) {
 	this->age = pAge;
 }
 void Entity::toString() const {
-	cout << "Entity # " << instance << " " << "age: " << this->age <<
-		"\n Main Member: " << this->mainMember << endl;
+	cout << "Entity # " << this->instance << " "
+		<< "\nage: " << this->age << " "
+		<< "mainMember: " << this->mainMember
+		<< " entityPtr: " << *this->entityPtr
+		<< " " << "location x : "
+		<< this->location.x << " " << "location y: " << this->location.y << "\n";
 }
 void Entity::setLocation(Vector2D vec) {
 	location = vec;
 }
 //static member variables;
 int Entity::count = 0;
+
+Vector2D Vector2D::operator=(const Vector2D& other) {
+	this->x = other.x;
+	this->y = other.y;
+	return *this;
+}
+Vector2D Vector2D::addToSelf(const Vector2D& other) {
+	this->x += other.x;
+	this->y += other.y;
+	return *this;
+}
+Vector2D Vector2D::operator+(const Vector2D& other)const {
+	return Vector2D(this->x + other.x, this->y + other.y);
+}
+void Vector2D::readLocation()const {
+	cout << "location X: " << this->x << " location Y: " << this->y << "\n";
+}
