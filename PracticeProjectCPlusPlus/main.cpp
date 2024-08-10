@@ -3,21 +3,24 @@
 
 using namespace std;
 
+const string& getProgramName() {
+	const static string programName{ "Hello world how are you?" };
+	return programName;
+}
+void toString(Entity& other) {
+	cout << "Pointer of classType Entity: " << other.getPointer() << "\n\n";
+}
 int main() {
 
-	Entity eOne{ 25 }, eTwo{ 30 };
-	eOne.setAccessToken(300);
-	eTwo.setAccessToken(150);
+	Entity eOne{ 5, 50, 43.3 }, eTwo{ 6 };
 
-	Entity total = eOne.add(eTwo.multiply(eOne));
+	Vector2D loc{ 200.32, 100.32 };
 
-	cout << total.getAge() << "HERE" << endl;
+	eOne.setLocation(loc);
+	cout << eOne.getLocation().x << " " << eOne.getLocation().y << "\n";
 
-	total.toString();
-	eOne.toString();
-
-
-
+	Entity totals = eOne;
+	cout << "TESTING: " << totals.getLocation().x << " " << totals.getLocation().y << "\n";
 
 	return 0;
 }
