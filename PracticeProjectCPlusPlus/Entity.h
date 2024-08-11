@@ -7,6 +7,10 @@ struct Vector2D {
 	Vector2D operator=(const Vector2D& other);
 	Vector2D addToSelf(const Vector2D& other);
 	Vector2D operator+(const Vector2D& other)const;
+	Vector2D& operator--();
+	Vector2D operator--(int);
+	Vector2D& operator++();
+	Vector2D operator++(int);
 
 	void readLocation() const;
 };
@@ -32,6 +36,7 @@ public:
 	Entity(const Entity& other);
 	//move constructor
 	Entity(Entity&& other)noexcept;
+	Entity& operator=(Entity&& other) noexcept;
 	~Entity();
 
 	//overloaded operators
@@ -45,7 +50,7 @@ public:
 	bool operator==(const Entity& other)const;
 
 	Entity multiply(const Entity& other) const;
-	Entity add(const Entity& other)const;
+	Entity add(const Entity& other);
 	bool isEqual(const Entity& other)const;
 
 	int getAge() const;

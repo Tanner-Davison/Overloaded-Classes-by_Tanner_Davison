@@ -13,25 +13,32 @@ Entity::Entity(const Entity& other)
 	: mainMember(other.mainMember), age(other.age), instance(++count), entityPtr(new double(*other.entityPtr)), location(other.location) {
 	cout << "Copy Constructor Invoked #: " << count << "\n";
 }
+
 //Move Constructor
 Entity::Entity(Entity&& other) noexcept
-	: age(other.age), mainMember(other.mainMember), instance(++count), entityPtr(new double(*other.entityPtr)), location(other.location)
-{
+	: age(other.age), mainMember(other.mainMember), instance(other.instance), entityPtr(other.entityPtr), location(other.location) {
 	cout << "Move Constructor Invoked\n";
+
+	other.entityPtr = nullptr;
 }
-//delete pointers memory set to null
+
+//Destructor
 Entity::~Entity() {
 	if (this->entityPtr != nullptr) {
 		delete entityPtr;
 		this->entityPtr = nullptr;
+		count--;
 	}
 }
+
 //prefix increment;
 Entity& Entity::operator++() {
+	++age;
 	++mainMember;
+	++(*this->entityPtr);
+	++location;
 	return *this;
 }
-
 
 //postfix increment++;
 Entity Entity::operator++(int) {
@@ -40,10 +47,13 @@ Entity Entity::operator++(int) {
 	return *this;
 }
 
-
 //preFix decrement;
 Entity& Entity::operator--() {
+	--age;
 	--mainMember;
+	--*this->entityPtr;
+	--location;
+
 	return *this;
 }
 
@@ -53,11 +63,7 @@ Entity Entity::operator--(int) {
 	--(*this);
 	return *this;
 }
-//arithmatic operator overload;
-Entity Entity::operator+ (const Entity& other) const {
-	return Entity(this->age + other.age, this->mainMember + other.mainMember, *this->entityPtr + *other.entityPtr, location + other.location);
 
-}
 //copy assignment operator overloading
 Entity& Entity::operator=(const Entity& other) {
 	if (this == &other) {
@@ -71,15 +77,27 @@ Entity& Entity::operator=(const Entity& other) {
 	cout << "copy assaignment overload invoked #: " << count << "\n";
 	return *this;
 }
-
+//move assignment operator;
+Entity& Entity::operator=(Entity&& other) noexcept {
+	if (this != &other) {
+		delete entityPtr;  // Clean up existing resource
+		age = other.age;
+		mainMember = other.mainMember;
+		instance = other.instance;
+		entityPtr = other.entityPtr;
+		location = other.location;
+		other.entityPtr = nullptr;
+		cout << "move assaignment = operator invoked\n";
+	}
+	return *this;
+}
+//arithmatic operator overload;
+Entity Entity::operator+ (const Entity& other) const {
+	return Entity(this->age + other.age, this->mainMember + other.mainMember, *this->entityPtr + *other.entityPtr, location + other.location);
+}
 //addition overloaded operator
-Entity Entity::add(const Entity& other) const {
-	Entity temp;
-	temp.setMainMember(this->mainMember + other.mainMember);
-	temp.setAge(this->age + other.age);
-	*temp.entityPtr = *this->entityPtr + *other.entityPtr;
-	temp.location = this->location + other.location;
-	return temp;
+Entity Entity::add(const Entity& other) {
+	return Entity(this->age += other.age, mainMember += other.mainMember, *entityPtr += *other.entityPtr, location + other.location);
 }
 
 //comparison overloaded operator
@@ -87,16 +105,14 @@ bool Entity::operator==(const Entity& other)const {
 	return ((mainMember == other.mainMember) && (age == other.age));
 }
 
+//* overloaded multiply operator
+Entity Entity::operator*(const Entity& other) const {
+	return Entity(this->age, this->mainMember * other.mainMember);
+}
 //multiply overloaded operator
 Entity Entity::multiply(const Entity& other) const {
 	return Entity(this->age, this->mainMember * other.mainMember);
 }
-
-//* overloaded operator
-Entity Entity::operator*(const Entity& other) const {
-	return Entity(this->age, this->mainMember * other.mainMember);
-}
-
 //member getters
 int Entity::getAge() const {
 	return this->age;
@@ -159,8 +175,26 @@ Vector2D Vector2D::operator+(const Vector2D& other)const {
 void Vector2D::readLocation()const {
 	cout << "location X: " << this->x << " location Y: " << this->y << "\n";
 }
-
-
+Vector2D& Vector2D::operator--() {
+	this->x--;
+	this->y--;
+	return *this;
+}
+Vector2D Vector2D::operator--(int) {
+	Vector2D temp;
+	temp = --(*this);
+	return temp;
+}
+Vector2D& Vector2D::operator++() {
+	x++;
+	y++;
+	return *this;
+}
+Vector2D Vector2D::operator++(int) {
+	Vector2D temp;
+	temp = ++(*this);
+	return temp;
+}
 //overloaded constructor
 ArrayList::ArrayList(int lengthP) : length(lengthP), list(new char[lengthP]) {
 	list = new char[length];
