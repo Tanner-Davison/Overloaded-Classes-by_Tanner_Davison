@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Entity.h"
+#include "Enemies.h"
 
 using namespace std;
 
@@ -20,16 +21,11 @@ void test(int&& x) {
 
 int main() {
 
-	Entity e1{ 100, 200, 32.3, Vector2D(2.5, 3.5) }, e2(300, 400, 32.5, Vector2D(2.5, 6.6));
+	Entity e1{ 1, 10, 1.1, Vector2D(0.0,0.0) };
+	Enemies enemy1;
+	howOld(e1);
 
-	e1 = e2--;
-
-	e1.toString();
-
-	string isEqual = e1.isEqual(e2) ? "They are the same" : "They are not equal";
-
-
-	cout << isEqual << "\n";
+	enemy1.getInstance(e1);
 
 	return 0;
 }
