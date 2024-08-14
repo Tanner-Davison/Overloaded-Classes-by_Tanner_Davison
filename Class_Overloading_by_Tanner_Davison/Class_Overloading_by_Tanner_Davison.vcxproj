@@ -24,6 +24,7 @@
     <ProjectGuid>{614c86fa-3053-474d-bdb5-f269057925be}</ProjectGuid>
     <RootNamespace>PracticeProjectCPlusPlus</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Class_Overloading_by_Tanner_Davison</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
