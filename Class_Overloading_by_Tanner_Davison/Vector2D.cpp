@@ -10,7 +10,6 @@ Vector2D Vector2D::operator=(const Vector2D& other) {
 	return *this;
 }
 
-// Add to self
 Vector2D Vector2D::addToSelf(const Vector2D& other) {
 	this->x += other.x;
 	this->y += other.y;
