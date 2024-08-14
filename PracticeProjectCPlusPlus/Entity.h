@@ -1,7 +1,5 @@
 #pragma once
-
-#include "Enemies.h"
-
+#include "stdafx.h"
 struct Vector2D {
 	double x;
 	double y;
@@ -14,18 +12,6 @@ struct Vector2D {
 	Vector2D& operator++();
 	Vector2D operator++(int);
 	void readLocation() const;
-};
-
-class ArrayList {
-public:
-	ArrayList(int lengthP = 1);
-	~ArrayList();
-	ArrayList& operator=(const ArrayList& other);
-	ArrayList(const ArrayList& other);
-	void printList() const;
-private:
-	char* list;
-	int length;
 };
 
 class Enemies;
@@ -42,6 +28,8 @@ public:
 	~Entity();
 
 	// Overloaded operators
+	friend std::ostream& operator<<(std::ostream& output, const Entity& entityP);
+	friend std::istream& operator>>(std::istream& input, Entity& entityP);
 	Entity& operator++();
 	Entity operator++(int);
 	Entity& operator--();
@@ -50,7 +38,6 @@ public:
 	Entity operator*(const Entity& other) const;
 	Entity& operator=(const Entity& other);
 	bool operator==(const Entity& other) const;
-
 	Entity multiply(const Entity& other) const;
 	Entity add(const Entity& other);
 	bool isEqual(const Entity& other) const;

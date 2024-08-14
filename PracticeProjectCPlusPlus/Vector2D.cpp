@@ -1,5 +1,4 @@
-#include "Entity.h"
-#include <iostream>
+#include "stdafx.h"
 
 using namespace std;
 

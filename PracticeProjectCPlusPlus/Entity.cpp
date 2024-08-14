@@ -1,24 +1,20 @@
-#include "Entity.h"
-#include <iostream>
-#include <cstring>
-
-using namespace std;
+#include "stdafx.h"
 
 int Entity::count = 0;
 
 Entity::Entity(int pAge, int pMainMember, double pPtr, Vector2D vec)
 	: age(pAge), mainMember(pMainMember), instance(++count), entityPtr(new double(pPtr)), location(vec) {
-	cout << "Constructor invoked #:  " << this->instance << "\n";
+	std::cout << "Constructor invoked #:  " << this->instance << "\n";
 }
 
 Entity::Entity(const Entity& other)
 	: mainMember(other.mainMember), age(other.age), instance(++count), entityPtr(new double(*other.entityPtr)), location(other.location) {
-	cout << "Copy Constructor Invoked #: " << count << "\n";
+	std::cout << "Copy Constructor Invoked #: " << count << "\n";
 }
 
 Entity::Entity(Entity&& other) noexcept
 	: age(other.age), mainMember(other.mainMember), instance(other.instance), entityPtr(other.entityPtr), location(other.location) {
-	cout << "Move Constructor Invoked\n";
+	std::cout << "Move Constructor Invoked\n";
 	other.entityPtr = nullptr;
 }
 
@@ -29,7 +25,29 @@ Entity::~Entity() {
 		count--;
 	}
 }
-
+// overloading the Stream Insertion and Extractin Operators
+std::ostream& operator<<(std::ostream& output, const Entity& entityP) {
+	output << "\n***********\n";
+	output << "instance # " << entityP.instance << "\n";
+	output << "mainMember:  " << entityP.mainMember << "\n";
+	output << "age: " << entityP.age << "\n";
+	output << "Pointer: " << *entityP.entityPtr << "\n";
+	output << "Location: " << "x:" << entityP.location.x << " y: " << entityP.location.y << "\n";
+	output << "***********\n";
+	output << "\n";
+	return output;
+}
+std::istream& operator>>(std::istream& input, Entity& entityP) {
+	std::cout << "Main Member: ";
+	input >> entityP.mainMember;
+	std::cout << "\nage: ";
+	input >> entityP.age;
+	std::cout << "\nentity pointer: ";
+	input >> *entityP.entityPtr;
+	std::cout << "\nlocation x and y:  ";
+	input >> entityP.location.x >> entityP.location.y;
+	return input;
+}
 Entity& Entity::operator++() {
 	++age;
 	++mainMember;
@@ -67,7 +85,7 @@ Entity& Entity::operator=(const Entity& other) {
 	this->entityPtr = new double(*other.entityPtr);
 	this->location = other.location;
 	this->age = other.age;
-	cout << "copy assignment overload invoked #: " << count << "\n";
+	std::cout << "copy assignment overload invoked #: " << count << "\n";
 	return *this;
 }
 
@@ -80,7 +98,7 @@ Entity& Entity::operator=(Entity&& other) noexcept {
 		entityPtr = other.entityPtr;
 		location = other.location;
 		other.entityPtr = nullptr;
-		cout << "move assignment = operator invoked\n";
+		std::cout << "move assignment = operator invoked\n";
 	}
 	return *this;
 }
@@ -118,7 +136,7 @@ int Entity::getAccess() const {
 }
 
 void Entity::getEnemy(const Enemies& enemyP) const {
-	cout << "Enemies member is: " << enemyP.member << "\n";
+	std::cout << "Enemies member is: " << enemyP.member << "\n";
 }
 
 Vector2D Entity::getLocation() const {
@@ -137,7 +155,7 @@ void Entity::setAge(int pAge) {
 	this->age = pAge;
 }
 void howOld(Entity& entityP) {
-	cout << "The entity is " << entityP.getAge() << " years old." << endl;
+	std::cout << "The entity is " << entityP.getAge() << " years old." << endl;
 }
 void Entity::toString() const {
 	cout << "Entity # " << this->instance << " "
@@ -154,46 +172,4 @@ void Entity::setLocation(Vector2D vec) {
 
 
 
-
-class ArrayList {
-public:
-	// Constructor
-	ArrayList(int lengthP = 1) : length(lengthP) {
-		list = new char[length];
-		memset(list, 0, length);
-	}
-
-	// Destructor
-	~ArrayList() {
-		delete[] list;
-	}
-
-	// Copy Assignment Operator
-	ArrayList& operator=(const ArrayList& other) {
-		if (this != &other) {
-			delete[] list;
-			length = other.length;
-			list = new char[length];
-			std::memcpy(list, other.list, length);
-		}
-		return *this;
-	}
-
-	// Copy Constructor
-	ArrayList(const ArrayList& other) : length(other.length), list(new char[length]) {
-		memcpy(list, other.list, length);
-	}
-
-	// Method to print the list
-	void printList() const {
-		for (int i = 0; i < length; ++i) {
-			cout << list[i];
-		}
-		cout << endl;
-	}
-
-private:
-	char* list;
-	int length;
-};
 

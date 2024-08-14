@@ -1,11 +1,12 @@
-#include <iostream>
-#include "Enemies.h"
-#include "Entity.h"
+#include "stdafx.h"
 
-using namespace std;
 
-Enemies::Enemies(double memberP) : member(memberP) {}
+Enemies::Enemies(double memberP, double armorP) : member(memberP), armor(armorP) {}
 
-void Enemies::getInstance(const Entity& entityE) const {
-	cout << "Instance of Entity #: " << entityE.instance << "\n";
+void Enemies::getInstanceOfEntity(const Entity& entityE) const {
+	std::cout << "Instance of Entity #: " << entityE.instance << "\n";
+}
+
+void printEnemyMember(const Enemies& enemyP) { //global friend function
+	std::cout << enemyP.member << "\n";
 }

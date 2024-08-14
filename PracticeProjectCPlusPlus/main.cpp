@@ -1,22 +1,19 @@
-#include <iostream>
-#include "Entity.h"
-#include "Enemies.h"
+#include "stdafx.h"
 
-using namespace std;
 
 const string& getProgramName() {
 	const static string programName{ "Hello world how are you?" };
 	return programName;
 }
 void static toString(Entity& other) {
-	cout << "Pointer of classType Entity: " << other.getPointer() << "\n\n";
+	std::cout << "Pointer of classType Entity: " << other.getPointer() << "\n\n";
 }
 
 void test(const int& x) {
-	cout << "L Value Reference" << endl;
+	std::cout << "L Value Reference" << endl;
 }
 void test(int&& x) {
-	cout << "R Value Reference" << endl;
+	std::cout << "R Value Reference" << endl;
 }
 
 int main() {
@@ -25,7 +22,11 @@ int main() {
 	Enemies enemy1;
 	howOld(e1);
 
-	enemy1.getInstance(e1);
+	enemy1.getInstanceOfEntity(e1);
+	Entity e2{ 2,3,20.3, Vector2D(40,43) };
+	std::cout << e1;
+
+	printEnemyMember(enemy1);
 
 	return 0;
 }
