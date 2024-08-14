@@ -1,7 +1,5 @@
 #include "stdafx.h"
 
-using namespace std;
-
 // Assignment operator
 Vector2D Vector2D::operator=(const Vector2D& other) {
 	if (this == &other) {
@@ -54,5 +52,5 @@ Vector2D Vector2D::operator++(int) {
 
 // Print the location
 void Vector2D::readLocation() const {
-	cout << "Location X: " << this->x << " Location Y: " << this->y << "\n";
+	std::cout << "Location X: " << this->x << " Location Y: " << this->y << "\n";
 }
