@@ -4,7 +4,11 @@
 struct Vector2D {
 	double x;
 	double y;
-	Vector2D(double pX = 0.0, double pY = 0.0) : x{ pX }, y{ pY } {}
+	Vector2D(double pX = 0.0, double pY = 0.0);
+	//conversion from vec3D
+	Vector2D(const Vector3D& vec3P);
+	//conversion to Vector3D;
+	operator Vector3D();
 	Vector2D operator=(const Vector2D& other);
 	Vector2D addToSelf(const Vector2D& other);
 	Vector2D operator+(const Vector2D& other) const;
@@ -14,3 +18,7 @@ struct Vector2D {
 	Vector2D operator++(int);
 	void readLocation() const;
 };
+
+//global declarations:
+
+

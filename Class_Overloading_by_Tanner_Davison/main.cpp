@@ -10,23 +10,24 @@ void static toString(Entity& other) {
 }
 
 void test(const int& x) {
-	std::cout << "L Value Reference" << endl;
+	std::cout << "L Value Reference" << std::endl;
 }
 void test(int&& x) {
-	std::cout << "R Value Reference" << endl;
+	std::cout << "R Value Reference" << std::endl;
 }
 
 int main() {
 
-	Entity e1{ 1, 10, 1.1, Vector2D(0.0,0.0) };
-	Enemies enemy1;
-	howOld(e1);
+	Vector3D vec3(3, 5, 6);
+	Vector2D vec2(5.5);
+	vec3 = vec2;
+	Entity entity1{ 20,40,4.4, Vector2D(2.3,4.3),6 };
+	std::cout << entity1 << "\n";
 
-	enemy1.getInstanceOfEntity(e1);
-	Entity e2{ 2,3,20.3, Vector2D(40,43) };
-	std::cout << e1;
-
-	printEnemyMember(enemy1);
+	for (int i = 0; i < 10; i++) {
+		std::cout << entity1[i] << ", ";
+	}
+	std::cout << "\n";
 
 	return 0;
 }

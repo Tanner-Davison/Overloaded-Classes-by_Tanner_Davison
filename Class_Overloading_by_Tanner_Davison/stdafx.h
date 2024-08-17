@@ -8,6 +8,7 @@
 #include <algorithm>
 
 // Project-specific headers
+#include "Vector3D.h"
 #include "Vector2D.h"
 #include "Entity.h"
 #include "Enemies.h"
