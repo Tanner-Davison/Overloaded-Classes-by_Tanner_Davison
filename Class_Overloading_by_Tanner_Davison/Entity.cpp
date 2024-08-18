@@ -9,7 +9,7 @@ Entity::Entity(int pAge, int pMainMember, double pPtr, Vector2D vec, int sizeP)
 		elements[i] = 0;
 	}
 }
-//copy constructor
+//Deep copy constructor
 Entity::Entity(const Entity& other)
 	: mainMember(other.mainMember), age(other.age), instance(++count), entityPtr(new double(*other.entityPtr)), location(other.location), size(other.size), elements(new int[other.size]) {
 	std::cout << "Copy Constructor Invoked #: " << count << "\n";
@@ -17,6 +17,7 @@ Entity::Entity(const Entity& other)
 		elements[i] = other.elements[i];
 	}
 }
+
 //move constructor
 Entity::Entity(Entity&& other) noexcept
 	: age(other.age), mainMember(other.mainMember), instance(other.instance), entityPtr(other.entityPtr), location(other.location), size(other.size), elements(other.elements) {

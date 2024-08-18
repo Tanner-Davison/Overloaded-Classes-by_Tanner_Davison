@@ -7,7 +7,7 @@ class Enemies;
 class Entity {
 public:
 	Entity(int pAge = 0, int pMainMember = 0, double pPtr = 0.0, Vector2D pVec = Vector2D(), int sizeP = 1);
-	// Copy constructor
+	// Deep Copy constructor
 	Entity(const Entity& other);
 	// Move constructor
 	Entity(Entity&& other) noexcept;
