@@ -49,40 +49,20 @@ private:
 int main() {
 
 	int const ARRAY_SIZE = 3;
-	int* inputAge = new int;
-	long long* inputNumber = new long long int;
-	int* inputBirthday = new int;
 
-	std::cout << "Enter Age: \n";
-	if (!(std::cin >> *inputAge)) {
-		std::cerr << "Invalid input for age!" << std::endl;
-		return 1;
-	}
-	std::cout << "Enter Number: \n";
-	if (!(std::cin >> *inputNumber)) {
-		std::cerr << "Invalid input for number!" << std::endl;
-		return 1;
-	}
-	std::cout << "Enter Birthday (mmDDYY)\n";
-	if (!(std::cin >> *inputBirthday)) {
-		std::cerr << "Invalid input for birthday!" << std::endl;
-		return 1;
+	Entity* myArrPointers[ARRAY_SIZE]{};
+
+	for (int i = 0; i < ARRAY_SIZE; i++) {
+		myArrPointers[i] = new Entity(i);
 	}
 
-	if (inputAge != nullptr && inputNumber != nullptr && inputBirthday != nullptr) {
-		Test* ptr = new Test[ARRAY_SIZE]{ Test(*inputAge), Test(*inputNumber), Test(*inputBirthday) };
-		for (int i = 0; i < 3; i++) {
-			ptr[i].toString();
-		}
-
-		delete[]ptr;
-		ptr = nullptr;
-		delete inputAge;
-		delete inputNumber;
-		delete inputBirthday;
+	for (int i = 0; i < 3; i++) {
+		std::cout << &myArrPointers[i] << "\n";
+		std::cout << *myArrPointers[i] << "\n";
 	}
-	else {
-		return 1;
+	for (int i = 0; i < 3; i++) {
+		delete myArrPointers[i];
+		myArrPointers[i] = nullptr;
 	}
 
 
