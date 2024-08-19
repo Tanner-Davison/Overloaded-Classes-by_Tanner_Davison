@@ -16,24 +16,76 @@ void test(int&& x) {
 	std::cout << "R Value Reference" << std::endl;
 }
 
+class Test {
+
+public:
+	Test(int memberP = 0) : member(memberP), memberLong(0) {
+		std::cout << "constructor Test was called: " << member << "\n";
+	}
+
+	// Constructor for long long
+	Test(long long memberP) : member(0), memberLong(memberP) {
+		std::cout << "overloaded constructor used for long long: " << memberLong << "\n";
+	}
+	~Test() {
+		std::cout << "Deallocating memory for TEST: " << (memberLong > member ? memberLong : member) << "\n";
+	}
+	void toString()const {
+		if (this->memberLong > this->member) {
+			std::cout << this->memberLong << endl;
+		}
+		else {
+			std::cout << this->member << endl;
+		}
+	}
+
+private:
+
+	int member;
+	long long memberLong;
+};
+
+
 int main() {
 
 	int const ARRAY_SIZE = 3;
-	Entity entity1{ 5,10,20,Vector2D(10,20),ARRAY_SIZE };
-	Entity entity2{ 10,20,40, Vector2D(20,40), ARRAY_SIZE };
-	Entity entity3{ 20,40,80, Vector2D(40,80), ARRAY_SIZE };
+	int* inputAge = new int;
+	long long* inputNumber = new long long int;
+	int* inputBirthday = new int;
 
-	double arr[ARRAY_SIZE]{ 40,50,200 };
-	double arr2[ARRAY_SIZE]{ 100,100,200 };
-	double arr3[ARRAY_SIZE]{ 500,200,100 };
+	std::cout << "Enter Age: \n";
+	if (!(std::cin >> *inputAge)) {
+		std::cerr << "Invalid input for age!" << std::endl;
+		return 1;
+	}
+	std::cout << "Enter Number: \n";
+	if (!(std::cin >> *inputNumber)) {
+		std::cerr << "Invalid input for number!" << std::endl;
+		return 1;
+	}
+	std::cout << "Enter Birthday (mmDDYY)\n";
+	if (!(std::cin >> *inputBirthday)) {
+		std::cerr << "Invalid input for birthday!" << std::endl;
+		return 1;
+	}
 
-	entity3.setElements(arr3, ARRAY_SIZE);
-	entity2.setElements(arr2, ARRAY_SIZE);
-	entity1.setElements(arr, ARRAY_SIZE);
+	if (inputAge != nullptr && inputNumber != nullptr && inputBirthday != nullptr) {
+		Test* ptr = new Test[ARRAY_SIZE]{ Test(*inputAge), Test(*inputNumber), Test(*inputBirthday) };
+		for (int i = 0; i < 3; i++) {
+			ptr[i].toString();
+		}
 
-	Entity totals = entity1 + entity2 + entity3;
+		delete[]ptr;
+		ptr = nullptr;
+		delete inputAge;
+		delete inputNumber;
+		delete inputBirthday;
+	}
+	else {
+		return 1;
+	}
 
-	std::cout << totals;
+
 
 
 

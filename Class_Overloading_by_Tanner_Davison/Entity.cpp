@@ -79,7 +79,8 @@ double& Entity::operator[](int subscript) {
 	}
 	else {
 		std::cout << "\n Index is out of bounds!\n";
-		return;
+		static double invalidValue = 0.0;
+		return invalidValue;
 	}
 }
 Entity& Entity::operator++() {

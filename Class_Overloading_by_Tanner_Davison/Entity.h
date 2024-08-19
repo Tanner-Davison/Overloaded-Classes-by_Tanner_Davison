@@ -40,6 +40,7 @@ public:
 	void setMainMember(int pAccess);
 	void setLocation(Vector2D vec);
 	void setElements(double* arrayP, int sizeP);
+
 	// Friend declarations
 	void getEnemy(const Enemies& enemyP) const;
 	friend class Enemies; // Grant access to Enemies

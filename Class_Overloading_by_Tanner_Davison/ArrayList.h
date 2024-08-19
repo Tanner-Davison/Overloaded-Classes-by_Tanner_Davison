@@ -1,7 +1,5 @@
 #pragma once
-#include <iostream>
-#include <cstring>
-#include <algorithm>
+#include "stdafx.h"
 
 using namespace std;
 
