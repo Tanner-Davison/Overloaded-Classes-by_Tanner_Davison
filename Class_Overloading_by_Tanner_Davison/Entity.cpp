@@ -3,7 +3,7 @@
 int Entity::count = 0;
 
 Entity::Entity(int pAge, int pMainMember, double pPtr, Vector2D vec, int sizeP)
-	: age(pAge), mainMember(pMainMember), instance(++count), entityPtr(new double(pPtr)), location(vec), size(sizeP), elements(new int[sizeP]) {
+	: age(pAge), mainMember(pMainMember), instance(++count), entityPtr(new double(pPtr)), location(vec), size(sizeP), elements(new double[sizeP]) {
 	std::cout << "Constructor invoked #:  " << this->instance << "\n";
 	for (int i = 0; i < size; i++) {
 		elements[i] = 0;
@@ -11,7 +11,7 @@ Entity::Entity(int pAge, int pMainMember, double pPtr, Vector2D vec, int sizeP)
 }
 //Deep copy constructor
 Entity::Entity(const Entity& other)
-	: mainMember(other.mainMember), age(other.age), instance(++count), entityPtr(new double(*other.entityPtr)), location(other.location), size(other.size), elements(new int[other.size]) {
+	: mainMember(other.mainMember), age(other.age), instance(++count), entityPtr(new double(*other.entityPtr)), location(other.location), size(other.size), elements(new double[other.size]) {
 	std::cout << "Copy Constructor Invoked #: " << count << "\n";
 	for (int i = 0; i < other.size; i++) {
 		elements[i] = other.elements[i];
@@ -73,15 +73,13 @@ std::istream& operator>>(std::istream& input, Entity& entityP) {
 	return input;
 }
 
-int& Entity::operator[](int subscript) {
-	static int boundsError = -1;
-
-	if (subscript >= 0 && subscript <= size - 1) {
+double& Entity::operator[](int subscript) {
+	if (subscript >= 0 && subscript < size) {
 		return elements[subscript];
 	}
 	else {
 		std::cout << "\n Index is out of bounds!\n";
-		return boundsError;
+		return;
 	}
 }
 Entity& Entity::operator++() {
@@ -117,10 +115,15 @@ Entity& Entity::operator=(const Entity& other) {
 		return *this;
 	}
 	delete entityPtr;
+	delete[]elements;
 	mainMember = other.mainMember;
 	this->entityPtr = new double(*other.entityPtr);
 	this->location = other.location;
 	this->age = other.age;
+	this->size = other.size;
+	for (int i = 0; i < this->size; i++) {
+		elements[i] = other.elements[i];
+	}
 	std::cout << "copy assignment overload invoked #: " << count << "\n";
 	return *this;
 }
@@ -128,23 +131,43 @@ Entity& Entity::operator=(const Entity& other) {
 Entity& Entity::operator=(Entity&& other) noexcept {
 	if (this != &other) {
 		delete entityPtr;
+		delete[] elements;
 		age = other.age;
 		mainMember = other.mainMember;
 		instance = other.instance;
 		entityPtr = other.entityPtr;
 		location = other.location;
 		other.entityPtr = nullptr;
+		this->size = other.size;
+		this->elements[other.size];
+		for (int i = 0; i < other.size; i++) {
+			elements[i] = other.elements[i];
+		}
 		std::cout << "move assignment = operator invoked\n";
 	}
 	return *this;
 }
 
-Entity Entity::operator+(const Entity& other) const {
-	return Entity(this->age + other.age, this->mainMember + other.mainMember, *this->entityPtr + *other.entityPtr, location + other.location);
+Entity Entity::operator+(const Entity& other) {
+	Entity temp(this->age + other.age, this->mainMember + other.mainMember, *this->entityPtr + *other.entityPtr, location + other.location, other.size);
+	for (int i = 0; i < other.size; i++) {
+		temp.elements[i] += other.elements[i];
+	}
+	return temp;
 }
 
-Entity Entity::add(const Entity& other) {
-	return Entity(this->age += other.age, mainMember += other.mainMember, *entityPtr += *other.entityPtr, location + other.location);
+Entity& Entity::add(const Entity& other) {
+	this->age += other.age;
+	this->mainMember += other.mainMember;
+	*this->entityPtr += *other.entityPtr;
+	this->location = this->location + other.location;
+	this->size = other.size;
+
+	for (int i = 0; i < other.size; i++) {
+		this->elements[i] += other.elements[i];
+	}
+
+	return *this;
 }
 
 bool Entity::operator==(const Entity& other) const {
@@ -186,7 +209,16 @@ bool Entity::isEqual(const Entity& other) const {
 void Entity::setMainMember(int pAccess) {
 	this->mainMember = pAccess;
 }
+void Entity::setElements(double* arrayP, int sizeP) {
+	if (sizeP != this->size) {
+		std::cerr << "Array size mistmatch check setElements in Entity" << endl;
+		return;
+	}
+	for (int i = 0; i < size; i++) {
+		this->elements[i] = arrayP[i];
+	}
 
+}
 void Entity::setAge(int pAge) {
 	this->age = pAge;
 }

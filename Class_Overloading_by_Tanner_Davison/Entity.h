@@ -17,17 +17,17 @@ public:
 	friend std::ostream& operator<<(std::ostream& output, const Entity& entityP);
 	friend std::istream& operator>>(std::istream& input, Entity& entityP);
 	//bounds array
-	int& operator[](int subscript);
+	double& operator[](int subscript);
 	Entity& operator++();
 	Entity operator++(int);
 	Entity& operator--();
 	Entity operator--(int);
-	Entity operator+(const Entity& other) const;
+	Entity operator+(const Entity& other);
 	Entity operator*(const Entity& other) const;
 	Entity& operator=(const Entity& other);
 	bool operator==(const Entity& other) const;
 	Entity multiply(const Entity& other) const;
-	Entity add(const Entity& other);
+	Entity& add(const Entity& other);
 	bool isEqual(const Entity& other) const;
 
 	int getAge() const;
@@ -39,7 +39,7 @@ public:
 	void setAge(int pAge);
 	void setMainMember(int pAccess);
 	void setLocation(Vector2D vec);
-
+	void setElements(double* arrayP, int sizeP);
 	// Friend declarations
 	void getEnemy(const Enemies& enemyP) const;
 	friend class Enemies; // Grant access to Enemies
@@ -53,7 +53,7 @@ private:
 	static int count;
 	int instance;
 	int size;
-	int* elements;
+	double* elements;
 };
 
 

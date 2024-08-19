@@ -18,16 +18,24 @@ void test(int&& x) {
 
 int main() {
 
-	Vector3D vec3(3, 5, 6);
-	Vector2D vec2(5.5);
-	vec3 = vec2;
-	Entity entity1{ 20,40,4.4, Vector2D(2.3,4.3),6 };
-	std::cout << entity1 << "\n";
+	int const ARRAY_SIZE = 3;
+	Entity entity1{ 5,10,20,Vector2D(10,20),ARRAY_SIZE };
+	Entity entity2{ 10,20,40, Vector2D(20,40), ARRAY_SIZE };
+	Entity entity3{ 20,40,80, Vector2D(40,80), ARRAY_SIZE };
 
-	for (int i = 0; i < 10; i++) {
-		std::cout << entity1[i] << ", ";
-	}
-	std::cout << "\n";
+	double arr[ARRAY_SIZE]{ 40,50,200 };
+	double arr2[ARRAY_SIZE]{ 100,100,200 };
+	double arr3[ARRAY_SIZE]{ 500,200,100 };
+
+	entity3.setElements(arr3, ARRAY_SIZE);
+	entity2.setElements(arr2, ARRAY_SIZE);
+	entity1.setElements(arr, ARRAY_SIZE);
+
+	Entity totals = entity1 + entity2 + entity3;
+
+	std::cout << totals;
+
+
 
 	return 0;
 }
