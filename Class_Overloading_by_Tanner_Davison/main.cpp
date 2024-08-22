@@ -50,22 +50,33 @@ int main() {
 
 	int const ARRAY_SIZE = 3;
 
+
 	Entity* myArrPointers[ARRAY_SIZE]{};
 
-	for (int i = 0; i < ARRAY_SIZE; i++) {
-		myArrPointers[i] = new Entity(i);
+	myArrPointers[0] = new Entity[2]{ Entity(3),Entity(5) };
+	myArrPointers[1] = new Entity[3]{};
+
+
+	myArrPointers[1][2].setLocation(Vector2D(200, 500));
+
+	for (int i = 0; i < 2; i++) {
+
+		myArrPointers[0][i].setAge(400);
+		std::cout << myArrPointers[0][i] << "\n";
+
+		if (i == 1) {
+			for (int j = 0; j < 3; j++) {
+				myArrPointers[1][j].setAge(j + 200);
+				std::cout << myArrPointers[1][j] << "\n";
+			}
+		}
+
 	}
 
-	for (int i = 0; i < 3; i++) {
-		std::cout << &myArrPointers[i] << "\n";
-		std::cout << *myArrPointers[i] << "\n";
-	}
-	for (int i = 0; i < 3; i++) {
-		delete myArrPointers[i];
+	for (int i = 0; i < ARRAY_SIZE; i++) {
+		delete[] myArrPointers[i];
 		myArrPointers[i] = nullptr;
 	}
-
-
 
 
 
