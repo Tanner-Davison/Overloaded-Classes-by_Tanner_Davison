@@ -1,69 +1,54 @@
+#include <utility>
+
 #include "stdafx.h"
 
-
-class Test {
-
+class Animals {
 public:
-	Test(int memberP = 0) : member(memberP), memberLong(0) {
-		std::cout << "constructor Test was called: " << member << "\n";
-	}
-
-	// Constructor for long long
-	Test(long long memberP) : member(0), memberLong(memberP) {
-		std::cout << "overloaded constructor used for long long: " << memberLong << "\n";
-	}
-	~Test() {
-		std::cout << "Deallocating memory for TEST: " << (memberLong > member ? memberLong : member) << "\n";
-	}
-	void toString()const {
-		if (this->memberLong > this->member) {
-			std::cout << this->memberLong << endl;
-		}
-		else {
-			std::cout << this->member << endl;
-		}
-	}
-
-private:
-
-	int member;
-	long long memberLong;
+    Animals() = default;
+    explicit Animals(std::string nameP="undefined", int const &ageP=0)
+        :name(std::move(nameP)), age(ageP) {};
+    void speak()const {
+        std::cout << name << " " << age << "\n";
+    }
+protected:
+    std::string name;
+    int age;
 };
 
-//static void modifyPointerAddress(int* ptrP, int* addressToAssaign) {
-//	ptrP = addressToAssaign;
-//}
-static void modifyPointerAddress(int** ptrP, int* addressToAssaign) {
-	*ptrP = addressToAssaign;
-}
-static void modifyPointerAddress(int*& ptrP, int* addressToAssaign) {
-	ptrP = addressToAssaign;
-}
+class Cats: public Animals {
+    public:
+    Cats() = default;
+    explicit Cats(std::string const &nameP, int const &age):Animals(nameP, age) {};
+
+    void speak() const {
+        std::cout << "Meoww ";
+        Animals::speak();
+    }
+};
+class Tiger: public Cats {
+    public:
+    explicit Tiger() = delete;
+    Tiger(std::string const &nameP, int const &age):Cats(nameP, age) {};
+
+    void speak() const {
+        Cats::speak();
+        std::cout<<"I am a tiger"<<std::endl;
+    }
+
+};
+
 
 int main() {
 
-
-	int STUFF = 4;
-	int MAX = 100;
-	int* ptr = &STUFF;
-	int varToAssaign{ 250 };
-	std::cout << "BEFORE: " << *ptr << endl;
-
-	int*& refToPointer = ptr;
-
-	/*modifyPointerAddress(refToPointer, &varToAssaign);*/
-	/*modifyPointerAddress(&ptr, &varToAssaign);*/
-	modifyPointerAddress(&ptr, &varToAssaign);
-
-	//"Ref to Pointer"
-	//int*& refToPtr = ptr;
-	//refToPtr = &varToAssaign;
+    Animals const donkey("Roger", 81);
+        donkey.speak();
+    Cats const lion("Cat", 100);
+        lion.speak();
+    Tiger const tiger("Tiger", 50);
+        tiger.speak();
+    Tiger const tiger3("Tiger 3" , 150);
+        tiger3.speak();
 
 
 
-	std::cout << "After: " << *ptr << std::endl;
-	std::cout << "stuff: " << STUFF << " MAX: " << MAX;
-
-
-	return 0;
 }
