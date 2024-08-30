@@ -2,53 +2,39 @@
 
 #include "stdafx.h"
 
-class Animals {
+class House
+{
 public:
-    Animals() = default;
-    explicit Animals(std::string nameP="undefined", int const &ageP=0)
-        :name(std::move(nameP)), age(ageP) {};
-    void speak()const {
-        std::cout << name << " " << age << "\n";
+    House()=default;
+    House(int const sqftP, const Vector2D& vec)
+    :sqft(sqftP), coord(vec){};
+    virtual ~House()=default;
+    void printHouse()const
+    {
+        std::cout<<"Sqft: "<< sqft << "\n" << "Coordinates: " << coord.x << " " << coord.y << std::endl;
     }
+
 protected:
-    std::string name;
-    int age;
+    int sqft{};
+    Vector2D coord;
 };
-
-class Cats: public Animals {
-    public:
-    Cats() = default;
-    explicit Cats(std::string const &nameP, int const &age):Animals(nameP, age) {};
-
-    void speak() const {
-        std::cout << "Meoww ";
-        Animals::speak();
-    }
-};
-class Tiger: public Cats {
-    public:
-    explicit Tiger() = delete;
-    Tiger(std::string const &nameP, int const &age):Cats(nameP, age) {};
-
-    void speak() const {
-        Cats::speak();
-        std::cout<<"I am a tiger"<<std::endl;
+class Family : public House
+{
+public:
+    Family()=default;
+    Family(int const membersP, std::string const headP): members(membersP), head(headP){};
+    void printFamilyHead()
+    {
+        std::cout << "Head Of House: " << head<< std::endl;
     }
 
+    int members{};
+    std::string head{};
 };
-
-
 int main() {
 
-    Animals const donkey("Roger", 81);
-        donkey.speak();
-    Cats const lion("Cat", 100);
-        lion.speak();
-    Tiger const tiger("Tiger", 50);
-        tiger.speak();
-    Tiger const tiger3("Tiger 3" , 150);
-        tiger3.speak();
-
-
+    const Vector2D coordinates{1700, 1500};
+    House house{1500,coordinates};
+    Family family{3, "Tanner"};
 
 }
