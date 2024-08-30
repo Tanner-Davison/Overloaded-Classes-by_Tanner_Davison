@@ -35,7 +35,7 @@ public:
     };
     void printFamilyInfo() const
     {
-        std::cout << "Head Of House: " << head << " Total Members: " << members <<  std::endl;
+        std::cout << "Head Of House: " << head << "\nTotal Members: " << members <<  std::endl;
         House::printHouse();
         std::cout << "Status: " << wealth_status << std::endl;
     }
@@ -45,10 +45,13 @@ protected:
     std::string wealth_status{};
 };
 int main() {
-
+    std::string headOfHouse{};
+    int familyCount{};
+    std::cout << "Enter Head of house and Total count of family members : ";
+    std::cin >> headOfHouse >> familyCount;
     const Vector2D coordinates{1700, 1500};
     House const house{1001,coordinates};
-    Family const family{3, "Tanner", house};
+    Family const family{familyCount, headOfHouse, house};
 
     family.printFamilyInfo();
 
