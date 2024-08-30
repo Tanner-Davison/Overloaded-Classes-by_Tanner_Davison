@@ -14,7 +14,6 @@ public:
         std::cout<<"Sqft: "<< sqft << "\n" << "Coordinates: " << coord.x << " " << coord.y << std::endl;
     }
 
-protected:
     int sqft{};
     Vector2D coord;
 };
@@ -22,19 +21,35 @@ class Family : public House
 {
 public:
     Family()=default;
-    Family(int const membersP, std::string const headP): members(membersP), head(headP){};
-    void printFamilyHead()
+    Family(int const membersP, std::string headP): members(membersP), head(std::move(headP)){};
+    Family(int const membersP, std::string headP, const House& house)
+        :members(membersP), head(std::move(headP))
     {
-        std::cout << "Head Of House: " << head<< std::endl;
+        if(house.sqft < 1000)
+        {
+            wealth_status = "poor";
+        }else
+        {
+            wealth_status = "wealthy";
+        }
+    };
+    void printFamilyInfo() const
+    {
+        std::cout << "Head Of House: " << head << " Total Members: " << members <<  std::endl;
+        House::printHouse();
+        std::cout << "Status: " << wealth_status << std::endl;
     }
-
+protected:
     int members{};
     std::string head{};
+    std::string wealth_status{};
 };
 int main() {
 
     const Vector2D coordinates{1700, 1500};
-    House house{1500,coordinates};
-    Family family{3, "Tanner"};
+    House const house{1001,coordinates};
+    Family const family{3, "Tanner", house};
+
+    family.printFamilyInfo();
 
 }
