@@ -35,15 +35,17 @@ public:
     };
     void printFamilyInfo() const
     {
-        std::cout << "Head Of House: " << head << " Total Members: " << members <<  std::endl;
+        std::cout << "Head Of House: " << head << "\nTotal Members: " << members <<  std::endl;
         House::printHouse();
         std::cout << "Status: " << wealth_status << std::endl;
     }
+
 protected:
     int members{};
     std::string head{};
     std::string wealth_status{};
 };
+
 int main() {
 
     const Vector2D coordinates{1700, 1500};
