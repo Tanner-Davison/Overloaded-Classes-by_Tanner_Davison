@@ -47,10 +47,13 @@ protected:
 };
 
 int main() {
-
+    std::string headOfHouse{};
+    int familyCount{};
+    std::cout << "Enter Head of house and Total count of family members : ";
+    std::cin >> headOfHouse >> familyCount;
     const Vector2D coordinates{1700, 1500};
     House const house{1001,coordinates};
-    Family const family{3, "Tanner", house};
+    Family const family{familyCount, headOfHouse, house};
 
     family.printFamilyInfo();
 
