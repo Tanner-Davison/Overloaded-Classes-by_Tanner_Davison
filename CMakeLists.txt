@@ -11,6 +11,8 @@ add_executable(my_executable Class_Overloading_by_Tanner_Davison/main.cpp
         Class_Overloading_by_Tanner_Davison/main.cpp
         Class_Overloading_by_Tanner_Davison/Vector2D.cpp
         Class_Overloading_by_Tanner_Davison/Vector3D.cpp
-   )
+        Class_Overloading_by_Tanner_Davison/Family.cpp
+        Class_Overloading_by_Tanner_Davison/Family.h
+)
 
 target_precompile_headers(my_executable PRIVATE Class_Overloading_by_Tanner_Davison/stdafx.h)

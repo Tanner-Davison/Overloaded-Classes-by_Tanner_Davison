@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS = -g -std=gnu++20
+CXX_FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
 
 # PCH options: CMakeFiles/my_executable.dir/cmake_pch.hxx.gch_OPTIONS = -Winvalid-pch;-x;c++-header;-include;C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
 
@@ -21,4 +21,6 @@ CXX_FLAGS = -g -std=gnu++20
 # PCH options: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector2D.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
 
 # PCH options: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector3D.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Family.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
 

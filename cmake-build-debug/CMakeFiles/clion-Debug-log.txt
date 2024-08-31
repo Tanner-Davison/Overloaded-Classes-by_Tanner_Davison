@@ -1,0 +1,4 @@
+"C:\Users\Tanner\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison -B C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\cmake-build-debug
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug

@@ -24,6 +24,9 @@ CMAKE_AR:FILEPATH=C:/Users/Tanner/CLion 2024.2.0.1/bin/mingw/bin/ar.exe
 // MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=Debug
 
+//Enable colored diagnostics throughout.
+CMAKE_COLOR_DIAGNOSTICS:BOOL=ON
+
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
