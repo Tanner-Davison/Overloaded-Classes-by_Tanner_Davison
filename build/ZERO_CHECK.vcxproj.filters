@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\build\CMakeFiles\46832dba58ef251b48f1b7df03d8c7cd\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{69B5D22E-34CF-3977-8E1E-176CD59C9433}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

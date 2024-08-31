@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\cmake-build-debug\CMakeFiles\my_executable.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\ArrayList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Enemies.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Vector2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Vector3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\cmake-build-debug\CMakeFiles\my_executable.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\cmake-build-debug\CMakeFiles\my_executable.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\cmake-build-debug\CMakeFiles\my_executable.dir\MinSizeRel\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\cmake-build-debug\CMakeFiles\my_executable.dir\RelWithDebInfo\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{00D65438-8013-37F5-A986-DD1A23EAE043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{CA29F398-BE69-3B0A-87B3-CF58BCB6C23F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4C0B5EED-13FF-347F-9A28-2F8C1BB19709}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
