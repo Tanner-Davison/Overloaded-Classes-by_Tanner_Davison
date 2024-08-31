@@ -23,7 +23,11 @@ class Family : public House
 
         Family(int membersP, std::string headP);
         Family(const House& houseP, int  membersP, std::string headP);
-        void printHouse() const {House::printHouse();}
+        void printHouse() const
+        {
+            std::cout << "printing from family: " << std:: endl;
+            House::printHouse();
+        }
         void printFamilyInfo() const;
 
         int members{};
