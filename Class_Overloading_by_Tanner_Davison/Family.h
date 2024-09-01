@@ -12,7 +12,8 @@ class House
         House(int sqftP, const Vector2D& vec);
         ~House()=default;
         void printHouse()const;
-
+        friend class Family;
+private:
         int sqft{};
         Vector2D coord;
 };
@@ -29,7 +30,8 @@ class Family : public House
             House::printHouse();
         }
         void printFamilyInfo() const;
-
+        friend class ExtendedFamily;
+    private:
         int members{};
         std::string head{};
         std::string wealth_status{};
@@ -43,6 +45,7 @@ class ExtendedFamily final : public Family{
 
         ExtendedFamily(const Family& familyP, std::string grandpaP, std::string grandmaP);
 
+        static void toString(const Family& familyP);
 
         void wholeFamily()const;
 
@@ -51,5 +54,6 @@ class ExtendedFamily final : public Family{
 };
 
 void getFamilyInfo(string& headP, string& grandFatherP, string& grandmotherP, int& familyCount);
+
 
 #endif //FAMILY_H

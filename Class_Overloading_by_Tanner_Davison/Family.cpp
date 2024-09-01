@@ -65,3 +65,7 @@ void getFamilyInfo(string& headP, string& grandFatherP, string& grandmotherP, in
     std::getline(std::cin, grandFatherP);
     std::getline(std::cin, grandmotherP);
 }
+void ExtendedFamily::toString(const Family& familyP)
+{
+    std::cout << familyP.members;
+}
