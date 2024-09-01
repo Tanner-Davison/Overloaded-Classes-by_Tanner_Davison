@@ -1,27 +1,15 @@
 #include <utility>
 
 #include "stdafx.h"
-#include "Vector.h"
+#include "Base.h"
+#include "Derived.h"
 
-namespace TEST
-{
-    void hello(){ cout<< "Hello" << endl; }
-    enum EGameDifficulty {Easy, Normal, Hard};
-}
-enum ETerrainDifficulty {Easy, Normal, Hard};
-void hello()
-{
-    std::cout << "hey!" << std::endl;
-}
 int main()
 {
-    using namespace TEST;
-    EGameDifficulty difficulty = EGameDifficulty::Hard;
 
-    Vector vec;
-    ::hello();
-    TEST::hello();
-    Vector::toString();
+   Base* basePtr = new Derived;
+    basePtr->toString();
+    delete basePtr;
     cout << "--------END OF PROGRAM----------" << endl;
     return 1;
 }

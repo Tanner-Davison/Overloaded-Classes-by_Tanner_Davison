@@ -13,12 +13,14 @@ add_executable(my_executable Class_Overloading_by_Tanner_Davison/main.cpp
         Class_Overloading_by_Tanner_Davison/Vector3D.cpp
         Class_Overloading_by_Tanner_Davison/Family.cpp
         Class_Overloading_by_Tanner_Davison/Family.h
-        Class_Overloading_by_Tanner_Davison/Vector.cpp
-        Class_Overloading_by_Tanner_Davison/Vector.h
+        Class_Overloading_by_Tanner_Davison/Base.cpp
+        Class_Overloading_by_Tanner_Davison/Base.h
         Class_Overloading_by_Tanner_Davison/Character.cpp
         Class_Overloading_by_Tanner_Davison/Character.h
         Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp
         Class_Overloading_by_Tanner_Davison/PlayerCharacter.h
+        Class_Overloading_by_Tanner_Davison/Derived.cpp
+        Class_Overloading_by_Tanner_Davison/Derived.h
 )
 
 target_precompile_headers(my_executable PRIVATE Class_Overloading_by_Tanner_Davison/stdafx.h)

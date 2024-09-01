@@ -195,21 +195,21 @@ CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Family.cpp.s: c
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Family.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx -S C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Family.cpp -o CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Family.cpp.s
 
-CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj: CMakeFiles/my_executable.dir/flags.make
-CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj: C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector.cpp
-CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx
-CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx.gch
-CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx -MD -MT CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj -MF CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Vector.cpp.obj.d -o CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Vector.cpp.obj -c C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Vector.cpp
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.obj: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.obj: C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Base.cpp
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx.gch
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx -MD -MT CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.obj -MF CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Base.cpp.obj.d -o CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Base.cpp.obj -c C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Base.cpp
 
-CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx -E C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Vector.cpp > CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Vector.cpp.i
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx -E C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Base.cpp > CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Base.cpp.i
 
-CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx -S C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Vector.cpp -o CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Vector.cpp.s
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx -S C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Base.cpp -o CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Base.cpp.s
 
 CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Character.cpp.obj: CMakeFiles/my_executable.dir/flags.make
 CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Character.cpp.obj: C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Character.cpp
@@ -243,6 +243,22 @@ CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx -S C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\PlayerCharacter.cpp -o CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\PlayerCharacter.cpp.s
 
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.obj: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.obj: C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Derived.cpp
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx.gch
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx -MD -MT CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.obj -MF CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Derived.cpp.obj.d -o CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Derived.cpp.obj -c C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Derived.cpp
+
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx -E C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Derived.cpp > CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Derived.cpp.i
+
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx -S C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Derived.cpp -o CMakeFiles\my_executable.dir\Class_Overloading_by_Tanner_Davison\Derived.cpp.s
+
 # Object files for target my_executable
 my_executable_OBJECTS = \
 "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/main.cpp.obj" \
@@ -252,9 +268,10 @@ my_executable_OBJECTS = \
 "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector2D.cpp.obj" \
 "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector3D.cpp.obj" \
 "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Family.cpp.obj" \
-"CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj" \
+"CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.obj" \
 "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Character.cpp.obj" \
-"CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.obj"
+"CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.obj" \
+"CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.obj"
 
 # External object files for target my_executable
 my_executable_EXTERNAL_OBJECTS =
@@ -267,14 +284,15 @@ my_executable.exe: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davi
 my_executable.exe: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector2D.cpp.obj
 my_executable.exe: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector3D.cpp.obj
 my_executable.exe: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Family.cpp.obj
-my_executable.exe: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj
+my_executable.exe: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.obj
 my_executable.exe: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Character.cpp.obj
 my_executable.exe: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.obj
+my_executable.exe: CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.obj
 my_executable.exe: CMakeFiles/my_executable.dir/build.make
 my_executable.exe: CMakeFiles/my_executable.dir/linkLibs.rsp
 my_executable.exe: CMakeFiles/my_executable.dir/objects1.rsp
 my_executable.exe: CMakeFiles/my_executable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable my_executable.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable my_executable.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\my_executable.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

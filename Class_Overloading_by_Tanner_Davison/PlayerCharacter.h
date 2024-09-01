@@ -4,8 +4,8 @@
 
 #pragma once
 #include "Character.h"
-// #include "Vector.h"
-class Vector;
+// #include "Base.h"
+class Base;
 
 class PlayerCharacter : public Character {
 public:
@@ -13,7 +13,7 @@ public:
     ~PlayerCharacter();
 
 private:
-    Vector* vec;
+    Base* vec;
 };
 
 

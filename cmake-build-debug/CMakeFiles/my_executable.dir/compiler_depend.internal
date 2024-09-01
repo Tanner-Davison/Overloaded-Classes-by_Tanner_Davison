@@ -5,10 +5,21 @@ CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/ArrayList.cpp.o
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/ArrayList.cpp
 
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Base.cpp.obj
+ C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
+ C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Base.cpp
+ C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Base.h
+
 CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Character.cpp.obj
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Character.cpp
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Character.h
+
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Derived.cpp.obj
+ C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
+ C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Base.h
+ C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Derived.cpp
+ C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Derived.h
 
 CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Enemies.cpp.obj
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
@@ -24,15 +35,10 @@ CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Family.cpp.obj
 
 CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.obj
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
+ C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Base.h
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Character.h
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/PlayerCharacter.h
- C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector.h
-
-CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj
- C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
- C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector.cpp
- C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector.h
 
 CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector2D.cpp.obj
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch.hxx
@@ -53,9 +59,8 @@ CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/main.cpp.obj
  C:/Program Files/JetBrains/CLion 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits
  C:/Program Files/JetBrains/CLion 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/utility
  C:/Program Files/JetBrains/CLion 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h
- C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Character.h
- C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/PlayerCharacter.h
- C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector.h
+ C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Base.h
+ C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Derived.h
  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/main.cpp
 
 CMakeFiles/my_executable.dir/cmake_pch.hxx.gch
