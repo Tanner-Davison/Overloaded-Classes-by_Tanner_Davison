@@ -1,10 +1,10 @@
-#include "stdafx.h"
+#include "Vector2D.h"
 
 //constructor
 Vector2D::Vector2D(double pX, double pY) : x(pX), y(pY) {}
 
 // Assignment operator
-Vector2D Vector2D::operator=(const Vector2D& other) {
+Vector2D& Vector2D::operator=(const Vector2D& other) {
 	if (this == &other) {
 		return *this; // Self-assignment check
 	}
@@ -16,9 +16,9 @@ Vector2D::Vector2D(const Vector3D& vec3P) {
 	x = vec3P.x;
 	y = vec3P.y;
 }
-Vector2D::operator Vector3D() {
+Vector2D::operator Vector3D()const {
 	std::cout << "Vector2D Conversion operator invoked\n";
-	return Vector3D(x, y, 0);
+	return {x, y, 0};
 }
 Vector2D Vector2D::addToSelf(const Vector2D& other) {
 	this->x += other.x;

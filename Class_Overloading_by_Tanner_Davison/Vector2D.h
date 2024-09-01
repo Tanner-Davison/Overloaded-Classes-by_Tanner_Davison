@@ -8,8 +8,8 @@ struct Vector2D {
 	//conversion from vec3D
 	Vector2D(const Vector3D& vec3P);
 	//conversion to Vector3D;
-	operator Vector3D();
-	Vector2D operator=(const Vector2D& other);
+	explicit operator Vector3D() const;
+	Vector2D& operator=(const Vector2D& other);
 	Vector2D addToSelf(const Vector2D& other);
 	Vector2D operator+(const Vector2D& other) const;
 	Vector2D& operator--();

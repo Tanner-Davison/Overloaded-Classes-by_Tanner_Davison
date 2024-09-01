@@ -152,6 +152,30 @@ Class_Overloading_by_Tanner_Davison/ArrayList.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/ArrayList.cpp.s
 .PHONY : Class_Overloading_by_Tanner_Davison/ArrayList.cpp.s
 
+Class_Overloading_by_Tanner_Davison/Character.obj: Class_Overloading_by_Tanner_Davison/Character.cpp.obj
+.PHONY : Class_Overloading_by_Tanner_Davison/Character.obj
+
+# target to build an object file
+Class_Overloading_by_Tanner_Davison/Character.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Character.cpp.obj
+.PHONY : Class_Overloading_by_Tanner_Davison/Character.cpp.obj
+
+Class_Overloading_by_Tanner_Davison/Character.i: Class_Overloading_by_Tanner_Davison/Character.cpp.i
+.PHONY : Class_Overloading_by_Tanner_Davison/Character.i
+
+# target to preprocess a source file
+Class_Overloading_by_Tanner_Davison/Character.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Character.cpp.i
+.PHONY : Class_Overloading_by_Tanner_Davison/Character.cpp.i
+
+Class_Overloading_by_Tanner_Davison/Character.s: Class_Overloading_by_Tanner_Davison/Character.cpp.s
+.PHONY : Class_Overloading_by_Tanner_Davison/Character.s
+
+# target to generate assembly for a file
+Class_Overloading_by_Tanner_Davison/Character.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Character.cpp.s
+.PHONY : Class_Overloading_by_Tanner_Davison/Character.cpp.s
+
 Class_Overloading_by_Tanner_Davison/Enemies.obj: Class_Overloading_by_Tanner_Davison/Enemies.cpp.obj
 .PHONY : Class_Overloading_by_Tanner_Davison/Enemies.obj
 
@@ -223,6 +247,54 @@ Class_Overloading_by_Tanner_Davison/Family.s: Class_Overloading_by_Tanner_Daviso
 Class_Overloading_by_Tanner_Davison/Family.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Family.cpp.s
 .PHONY : Class_Overloading_by_Tanner_Davison/Family.cpp.s
+
+Class_Overloading_by_Tanner_Davison/PlayerCharacter.obj: Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.obj
+.PHONY : Class_Overloading_by_Tanner_Davison/PlayerCharacter.obj
+
+# target to build an object file
+Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.obj
+.PHONY : Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.obj
+
+Class_Overloading_by_Tanner_Davison/PlayerCharacter.i: Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.i
+.PHONY : Class_Overloading_by_Tanner_Davison/PlayerCharacter.i
+
+# target to preprocess a source file
+Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.i
+.PHONY : Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.i
+
+Class_Overloading_by_Tanner_Davison/PlayerCharacter.s: Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.s
+.PHONY : Class_Overloading_by_Tanner_Davison/PlayerCharacter.s
+
+# target to generate assembly for a file
+Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.s
+.PHONY : Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.s
+
+Class_Overloading_by_Tanner_Davison/Vector.obj: Class_Overloading_by_Tanner_Davison/Vector.cpp.obj
+.PHONY : Class_Overloading_by_Tanner_Davison/Vector.obj
+
+# target to build an object file
+Class_Overloading_by_Tanner_Davison/Vector.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj
+.PHONY : Class_Overloading_by_Tanner_Davison/Vector.cpp.obj
+
+Class_Overloading_by_Tanner_Davison/Vector.i: Class_Overloading_by_Tanner_Davison/Vector.cpp.i
+.PHONY : Class_Overloading_by_Tanner_Davison/Vector.i
+
+# target to preprocess a source file
+Class_Overloading_by_Tanner_Davison/Vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.i
+.PHONY : Class_Overloading_by_Tanner_Davison/Vector.cpp.i
+
+Class_Overloading_by_Tanner_Davison/Vector.s: Class_Overloading_by_Tanner_Davison/Vector.cpp.s
+.PHONY : Class_Overloading_by_Tanner_Davison/Vector.s
+
+# target to generate assembly for a file
+Class_Overloading_by_Tanner_Davison/Vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.s
+.PHONY : Class_Overloading_by_Tanner_Davison/Vector.cpp.s
 
 Class_Overloading_by_Tanner_Davison/Vector2D.obj: Class_Overloading_by_Tanner_Davison/Vector2D.cpp.obj
 .PHONY : Class_Overloading_by_Tanner_Davison/Vector2D.obj
@@ -323,6 +395,9 @@ help:
 	@echo ... Class_Overloading_by_Tanner_Davison/ArrayList.obj
 	@echo ... Class_Overloading_by_Tanner_Davison/ArrayList.i
 	@echo ... Class_Overloading_by_Tanner_Davison/ArrayList.s
+	@echo ... Class_Overloading_by_Tanner_Davison/Character.obj
+	@echo ... Class_Overloading_by_Tanner_Davison/Character.i
+	@echo ... Class_Overloading_by_Tanner_Davison/Character.s
 	@echo ... Class_Overloading_by_Tanner_Davison/Enemies.obj
 	@echo ... Class_Overloading_by_Tanner_Davison/Enemies.i
 	@echo ... Class_Overloading_by_Tanner_Davison/Enemies.s
@@ -332,6 +407,12 @@ help:
 	@echo ... Class_Overloading_by_Tanner_Davison/Family.obj
 	@echo ... Class_Overloading_by_Tanner_Davison/Family.i
 	@echo ... Class_Overloading_by_Tanner_Davison/Family.s
+	@echo ... Class_Overloading_by_Tanner_Davison/PlayerCharacter.obj
+	@echo ... Class_Overloading_by_Tanner_Davison/PlayerCharacter.i
+	@echo ... Class_Overloading_by_Tanner_Davison/PlayerCharacter.s
+	@echo ... Class_Overloading_by_Tanner_Davison/Vector.obj
+	@echo ... Class_Overloading_by_Tanner_Davison/Vector.i
+	@echo ... Class_Overloading_by_Tanner_Davison/Vector.s
 	@echo ... Class_Overloading_by_Tanner_Davison/Vector2D.obj
 	@echo ... Class_Overloading_by_Tanner_Davison/Vector2D.i
 	@echo ... Class_Overloading_by_Tanner_Davison/Vector2D.s

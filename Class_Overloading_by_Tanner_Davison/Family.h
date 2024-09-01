@@ -2,8 +2,7 @@
 // Created by Tanner on 8/30/2024.
 //
 
-#ifndef FAMILY_H
-#define FAMILY_H
+#pragma once
 
 class House
 {
@@ -13,6 +12,7 @@ class House
         ~House()=default;
         void printHouse()const;
         friend class Family;
+
 private:
         int sqft{};
         Vector2D coord;
@@ -56,4 +56,4 @@ class ExtendedFamily final : public Family{
 void getFamilyInfo(string& headP, string& grandFatherP, string& grandmotherP, int& familyCount);
 
 
-#endif //FAMILY_H
+//FAMILY_H

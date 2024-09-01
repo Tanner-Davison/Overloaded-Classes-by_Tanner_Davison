@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "Enemies.h"
 
 
 Enemies::Enemies(double memberP, double armorP, int enemyAgeP) : member(memberP), armor(armorP), enemyAge(enemyAgeP) {}

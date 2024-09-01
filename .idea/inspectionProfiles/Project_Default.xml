@@ -1,6 +1,11 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
+    <inspection_tool class="CppEnforceDoStatementBraces" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="CppEnforceForStatementBraces" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="CppEnforceIfStatementBraces" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="CppEnforceWhileStatementBraces" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="CppRemoveRedundantBraces" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="SpellCheckingInspection" enabled="true" level="INFORMATION" enabled_by_default="true">
       <option name="processCode" value="true" />
       <option name="processLiterals" value="true" />

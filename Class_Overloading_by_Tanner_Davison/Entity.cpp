@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "Entity.h"
 
 int Entity::count = 0;
 
@@ -11,7 +11,7 @@ Entity::Entity(int pAge, int pMainMember, double pPtr, Vector2D vec, int sizeP)
 }
 //Deep copy constructor
 Entity::Entity(const Entity& other)
-	: mainMember(other.mainMember), age(other.age), instance(++count), entityPtr(new double(*other.entityPtr)), location(other.location), size(other.size), elements(new double[other.size]) {
+	: mainMember(other.mainMember), age(other.age), instance(++count), entityPtr(new double(*other.entityPtr)),location(other.location), size(other.size), elements(new double[other.size]) {
 	std::cout << "Copy Constructor Invoked #: " << count << "\n";
 	for (int i = 0; i < other.size; i++) {
 		elements[i] = other.elements[i];

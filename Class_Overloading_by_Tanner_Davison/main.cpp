@@ -1,19 +1,28 @@
 #include <utility>
 
 #include "stdafx.h"
+#include "Vector.h"
 
+namespace TEST
+{
+    void hello(){ cout<< "Hello" << endl; }
+    enum EGameDifficulty {Easy, Normal, Hard};
+}
+enum ETerrainDifficulty {Easy, Normal, Hard};
+void hello()
+{
+    std::cout << "hey!" << std::endl;
+}
+int main()
+{
+    using namespace TEST;
+    EGameDifficulty difficulty = EGameDifficulty::Hard;
 
-int main() {
-    std::string headOfHouse{};
-    std::string grandFather{};
-    std::string grandmother{};
-    int familyCount{};
-    getFamilyInfo(headOfHouse, grandFather, grandmother, familyCount);
-    const Vector2D coordinates{1700, 1500};
-    House const house{1001,coordinates};
-    Family const family{house, familyCount, headOfHouse};
-    ExtendedFamily const extendedFamily{family, grandFather, grandmother};
+    Vector vec;
+    ::hello();
+    TEST::hello();
+    Vector::toString();
 
-    extendedFamily.toString(family);
-
+    cout << "--------END OF PROGRAM----------" << endl;
+    return 1;
 }

@@ -2,7 +2,7 @@
 // Created by Tanner on 8/30/2024.
 //
 
-#include "Family.h"
+#include "stdafx.h"
 
 House
     ::House(int const sqftP, const Vector2D& vec)

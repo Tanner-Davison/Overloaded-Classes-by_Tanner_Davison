@@ -4,6 +4,10 @@
 CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/ArrayList.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx \
   C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/ArrayList.cpp
 
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Character.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx \
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Character.cpp \
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Character.h
+
 CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Enemies.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx \
   C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Enemies.cpp
 
@@ -11,8 +15,17 @@ CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Entity.cpp.obj:
   C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Entity.cpp
 
 CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Family.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx \
-  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Family.cpp \
-  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Family.h
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Family.cpp
+
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx \
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Character.h \
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp \
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/PlayerCharacter.h \
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector.h
+
+CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx \
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector.cpp \
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector.h
 
 CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector2D.cpp.obj: CMakeFiles/my_executable.dir/cmake_pch.hxx \
   C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector2D.cpp
@@ -30,6 +43,9 @@ CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/main.cpp.obj: C
   C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/utility \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Character.h \
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/PlayerCharacter.h \
+  C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector.h \
   C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/main.cpp
 
 CMakeFiles/my_executable.dir/cmake_pch.hxx.gch: CMakeFiles/my_executable.dir/cmake_pch.hxx \
@@ -222,27 +238,41 @@ C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloa
 
 CMakeFiles/my_executable.dir/cmake_pch.hxx:
 
-C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/wchar_s.h:
+C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/x86_64-w64-mingw32/include/stdio.h:
 
-C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector3D.cpp:
+C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc:
+
+C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Character.cpp:
+
+C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Character.h:
 
 C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Enemies.cpp:
 
 C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Family.cpp:
 
-C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/alloc_traits.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h:
-
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string:
 
 C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Entity.cpp:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstring:
+
+C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp:
+
+C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/PlayerCharacter.h:
+
+C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector.h:
+
+C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector.cpp:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_init_exception.h:
 
 C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector2D.cpp:
 
-C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Family.h:
+C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/wchar_s.h:
+
+C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector3D.cpp:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h:
 
@@ -314,12 +344,6 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h:
 
-C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/x86_64-w64-mingw32/include/stdio.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc:
-
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h:
@@ -352,8 +376,6 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc:
 
-C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h:
-
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.tcc:
@@ -378,7 +400,13 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h:
 
+C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/alloc_traits.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h:
+
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_base.h:
 
@@ -465,8 +493,6 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdio:
-
-C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstring:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h:
 
@@ -599,6 +625,8 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/x86_64-w64-mingw32/inclu
 C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/ArrayList.h:
 
 C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Enemies.h:
+
+C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Family.h:
 
 C:/Users/Tanner/CLionProjects/Overloaded-Classes-by_Tanner_Davison/Class_Overloading_by_Tanner_Davison/Vector2D.h:
 
