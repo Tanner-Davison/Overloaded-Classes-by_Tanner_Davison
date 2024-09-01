@@ -22,7 +22,6 @@ int main()
     ::hello();
     TEST::hello();
     Vector::toString();
-
     cout << "--------END OF PROGRAM----------" << endl;
     return 1;
 }
