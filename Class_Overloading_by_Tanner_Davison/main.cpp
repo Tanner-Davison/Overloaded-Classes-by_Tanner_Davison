@@ -4,12 +4,21 @@
 #include "Base.h"
 #include "Derived.h"
 
+void display(const Base& baseP) {
+	baseP.toString();
+}
 int main()
 {
 
-   Base* basePtr = new Derived;
-    basePtr->toString();
-    delete basePtr;
-    cout << "--------END OF PROGRAM----------" << endl;
-    return 1;
+	int tan = 10;
+	string name = "tanner";
+
+	cout << to_string(tan) <<endl;
+	string* man = (string*)&name;
+
+	cout << *man << endl;
+
+
+	cout << "--------END OF PROGRAM--------" << endl;
+	return 1;
 }

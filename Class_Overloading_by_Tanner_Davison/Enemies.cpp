@@ -1,5 +1,5 @@
 #include "Enemies.h"
-
+#include "stdafx.h"
 
 Enemies::Enemies(double memberP, double armorP, int enemyAgeP) : member(memberP), armor(armorP), enemyAge(enemyAgeP) {}
 

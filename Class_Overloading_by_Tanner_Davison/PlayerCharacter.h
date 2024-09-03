@@ -4,16 +4,16 @@
 
 #pragma once
 #include "Character.h"
-// #include "Base.h"
-class Base;
+#include "Base.h"
+
 
 class PlayerCharacter : public Character {
 public:
-    PlayerCharacter();
-    ~PlayerCharacter();
+	PlayerCharacter();
+	~PlayerCharacter();
 
-private:
-    Base* vec;
+
+	Base* vec;
 };
 
 

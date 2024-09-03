@@ -3,13 +3,11 @@
 //
 #pragma once
 
-
-
 class Character {
 public:
-    Character();
-    ~Character();
-    int length;
+	Character();
+	~Character();
+	int length;
 };
 
 

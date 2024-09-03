@@ -15,3 +15,6 @@
 #include "Enemies.h"
 #include "ArrayList.h"
 #include "Family.h"
+#include "Base.h"
+#include "Derived.h"
+#include "PlayerCharacter.h"

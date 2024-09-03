@@ -6,12 +6,15 @@
 
 
 class Base {
-    public:
-        Base();
-        virtual ~Base();
-        virtual void toString() const;
+public:
+	Base();
+	explicit Base(int xP);
+	virtual ~Base();
+	virtual void toString()const;
 
-    string member;
+	string member;
+protected:
+	int x;
 };
 
 

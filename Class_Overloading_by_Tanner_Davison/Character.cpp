@@ -3,12 +3,13 @@
 //
 
 #include "Character.h"
+#include "stdafx.h"
 
 Character::Character()
 {
-    cout << "Character Constructed" << endl;
+	cout << "Character Constructed" << endl;
 }
 Character::~Character()
 {
-    cout << "Character Destroyed" << endl;
+	cout << "Character Destroyed" << endl;
 }
