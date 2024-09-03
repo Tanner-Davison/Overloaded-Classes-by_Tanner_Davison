@@ -9,15 +9,11 @@ void display(const Base& baseP) {
 }
 int main()
 {
+	Base * base = new Derived(100,50);
+	Derived* derived;
 
-	int tan = 10;
-	string name = "tanner";
-
-	cout << to_string(tan) <<endl;
-	string* man = (string*)&name;
-
-	cout << *man << endl;
-
+	derived = static_cast<Derived*>(base);
+	derived->specialFunc();
 
 	cout << "--------END OF PROGRAM--------" << endl;
 	return 1;
