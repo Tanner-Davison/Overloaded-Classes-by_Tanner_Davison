@@ -22,9 +22,39 @@
     <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Vector3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Family.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Character.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\PlayerCharacter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Derived.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Family.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Character.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\PlayerCharacter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\Class_Overloading_by_Tanner_Davison\Derived.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\Tanner\CLionProjects\Overloaded-Classes-by_Tanner_Davison\build\CMakeFiles\my_executable.dir\Debug\cmake_pch.hxx">
