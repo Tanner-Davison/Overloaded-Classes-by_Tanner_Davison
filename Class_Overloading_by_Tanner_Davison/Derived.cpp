@@ -12,6 +12,7 @@ Derived::Derived()
 
 Derived::Derived(const int xP, const int yP): basePtr(new Base(xP)), y(yP)
 {
+	privateMember = new int(yP);
 	std::cout<< "Derived Class Constructed\n" << endl;
 }
 

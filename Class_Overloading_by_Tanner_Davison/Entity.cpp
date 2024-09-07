@@ -36,7 +36,7 @@ Entity::~Entity() {
 	}
 	delete[] elements;
 }
-// overloading the Stream Insertion and Extractin Operators
+// overloading the Stream Insertion and Extraction Operators
 std::ostream& operator<<(std::ostream& output, const Entity& entityP) {
 	output << "\n***********\n";
 	output << "instance # " << entityP.instance << "\n";
