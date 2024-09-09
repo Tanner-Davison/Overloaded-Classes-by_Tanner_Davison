@@ -3,6 +3,8 @@
 #include "stdafx.h"
 #include "Base.h"
 #include "Derived.h"
+#include "IBaseInterface.h"
+#include "InterfaceDerived.h"
 
 class Abstract
 {
@@ -24,26 +26,10 @@ public:
 };
 int main()
 {
-string* mystrings[5];
-	for(int x =0; x < 5; x++)
-	{
-		mystrings[x] = new std::string;
-	}
-	for(int x =0; x < 5; x++)
-	{
-		string temp;
-		std::getline(std::cin, temp);
-		*mystrings[x] = temp;
+	const IBaseInterface* myBase = new InterfaceDerived();
 
-	}
-	for(int x = 0; x < 5; x++)
-	{
-		std::cout << *mystrings[x] << endl;
-	}
-	for(int x = 0; x < 5; x++)
-	{
-		delete mystrings[x];
-	}
+	cout << *myBase << endl;
+
 cout << "--------END OF PROGRAM--------" << endl;
 	return 1;
 }
