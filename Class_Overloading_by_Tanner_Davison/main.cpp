@@ -10,7 +10,7 @@ template<typename T>
 
 T returnSmallest(const T& x,const T& y)
 {
-	return x >= y ? y : x;
+	return x <= y ? x : y;
 }
 template<typename B>
 void interchange(B& x, B&y) noexcept
@@ -22,15 +22,35 @@ void interchange(B& x, B&y) noexcept
 }
 
 template <typename X, typename Y, typename Z>
-void print(const X& x, const Y& y, const Z&z)
+void printAll(const X& x, const Y& y, const Z&z)
 {
 	std::cout << x << " " << y << " " << z << endl;
 }
+template <typename C>
+void print(const C& c)
+{
+	std::cout << c << endl;
+}
+struct Example
+{
+	int member;
 
+	bool operator<=(const Example &rho)const
+	{
+		return this->member < rho.member;
+	};
+};
+std::ostream& operator<<(std::ostream& output, const Example& exampleP)
+{
+	output << exampleP.member;
+	return output;
+}
 int main()
 {
-	print<char, int, float>('X', 100, 52.5);
-	print<>(200, 200, 150.5);
+	constexpr Example one{100};
+	constexpr Example two{200};
+	const auto three = returnSmallest<Example>(one, two);
+	print(three);
 
 cout << "--------END OF PROGRAM--------" << endl;
 	return 1;
