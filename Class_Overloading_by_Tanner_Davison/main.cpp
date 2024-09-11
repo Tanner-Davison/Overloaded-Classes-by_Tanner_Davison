@@ -6,29 +6,31 @@
 #include "IBaseInterface.h"
 #include "InterfaceDerived.h"
 
-class Abstract
+template<typename T>
+
+T returnSmallest(const T& x,const T& y)
 {
-public:
-	virtual void tostring()const=0;
-	virtual ~Abstract()
-	{
-		std::cout << "Abstract Destructing..." << endl;
-	};
-};
-class DerivedAb : public Abstract
+	return x >= y ? y : x;
+}
+template<typename B>
+void interchange(B& x, B&y) noexcept
 {
-public:
-	void tostring() const override
-	{
-		std::cout << "overriding abstract" << endl;
-	}
-	virtual ~DerivedAb(){std::cout << "derivedAb destructor" << endl;};
-};
+	B temp;
+	temp = x;
+	x = y;
+	y = temp;
+}
+
+template <typename X, typename Y, typename Z>
+void print(const X& x, const Y& y, const Z&z)
+{
+	std::cout << x << " " << y << " " << z << endl;
+}
+
 int main()
 {
-	const IBaseInterface* myBase = new InterfaceDerived();
-
-	cout << *myBase << endl;
+	print<char, int, float>('X', 100, 52.5);
+	print<>(200, 200, 150.5);
 
 cout << "--------END OF PROGRAM--------" << endl;
 	return 1;
