@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Entity.cpp.obj.d"
   "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Family.cpp.obj"
   "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Family.cpp.obj.d"
+  "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/InterfaceDerived.cpp.obj"
+  "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/InterfaceDerived.cpp.obj.d"
   "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.obj"
   "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/PlayerCharacter.cpp.obj.d"
   "CMakeFiles/my_executable.dir/Class_Overloading_by_Tanner_Davison/Vector2D.cpp.obj"

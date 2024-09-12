@@ -34,7 +34,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 26,
+				"line" : 30,
 				"parent" : 0
 			}
 		]
@@ -110,7 +110,8 @@
 				10,
 				12,
 				14,
-				16
+				16,
+				19
 			]
 		}
 	],
@@ -158,7 +159,8 @@
 				10,
 				12,
 				14,
-				16
+				16,
+				19
 			]
 		},
 		{
@@ -170,14 +172,17 @@
 				11,
 				13,
 				15,
-				17
+				17,
+				18,
+				20,
+				21
 			]
 		},
 		{
 			"name" : "Precompile Header File",
 			"sourceIndexes" : 
 			[
-				18
+				22
 			]
 		}
 	],
@@ -283,6 +288,27 @@
 		{
 			"backtrace" : 1,
 			"path" : "Class_Overloading_by_Tanner_Davison/Derived.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Class_Overloading_by_Tanner_Davison/IBaseInterface.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Class_Overloading_by_Tanner_Davison/InterfaceDerived.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Class_Overloading_by_Tanner_Davison/InterfaceDerived.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Class_Overloading_by_Tanner_Davison/ExampleTemplate.h",
 			"sourceGroupIndex" : 1
 		},
 		{

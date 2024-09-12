@@ -1,16 +1,21 @@
 //
-// Created by Tanner Davison on 9/8/24.
+// Created by Tanner on 9/8/2024.
 //
 
-#ifndef IBASEINTERFACE_H
-#define IBASEINTERFACE_H
+#pragma once
+#include <ostream>
 
+class IBaseInterface
+{
+public:
+    virtual void tostring(std::ostream & output)const=0;
 
+    virtual ~IBaseInterface(){};
 
-class IBaseInterface {
 
 };
-
-
-
-#endif //IBASEINTERFACE_H
+inline std::ostream& operator<<(std::ostream& output, const IBaseInterface& interface)
+{
+    interface.tostring(output);
+    return output;
+}

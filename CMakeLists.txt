@@ -22,8 +22,9 @@ add_executable(my_executable Class_Overloading_by_Tanner_Davison/main.cpp
         Class_Overloading_by_Tanner_Davison/Derived.cpp
         Class_Overloading_by_Tanner_Davison/Derived.h
         Class_Overloading_by_Tanner_Davison/IBaseInterface.h
-        Class_Overloading_by_Tanner_Davison/Alien.cpp
-        Class_Overloading_by_Tanner_Davison/Alien.h
+        Class_Overloading_by_Tanner_Davison/InterfaceDerived.cpp
+        Class_Overloading_by_Tanner_Davison/InterfaceDerived.h
+        Class_Overloading_by_Tanner_Davison/ExampleTemplate.h
 )
 
 target_precompile_headers(my_executable PRIVATE Class_Overloading_by_Tanner_Davison/stdafx.h)
