@@ -73,9 +73,9 @@ private:
 template <typename T>
 
 std::vector<T> addTwoArrays(const std::vector<T>& arrOne, const std::vector<T>& arrTwo) {
-	size_t _SIZE = (arrOne.size() > arrTwo.size()) ? arrOne.size() : arrTwo.size();
-	std::vector<T> temp(_SIZE);
-	for (int i = 0; i < _SIZE; i++) {
+	size_t SIZE = (arrOne.size() > arrTwo.size()) ? arrOne.size() : arrTwo.size();
+	std::vector<T> temp(SIZE);
+	for (int i = 0; i < SIZE; i++) {
 		if (i >= arrOne.size()) {
 			temp[i] = arrTwo[i];
 		}
@@ -133,7 +133,7 @@ T smallestMembers(const Pairs<T>& pairP) {
 }
 template <typename T>
 T smallestMembers(const Pairs<T>* pairP) {
-	return (pairP.first < pairP.second ? pairP.first : pairP.second);
+	return pairP->first < pairP->second ? pairP->first : pairP->second;
 }
 
 
