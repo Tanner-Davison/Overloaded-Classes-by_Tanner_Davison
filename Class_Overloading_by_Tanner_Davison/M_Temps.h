@@ -2,7 +2,7 @@
 template <typename T>
 class CharClass {
 public:
-	CharClass(T memberP = 0);
+	explicit CharClass(T memberP = 0);
 	~CharClass() = default;
 	void setMember(const T& memberP);
 	T getMember()const {
