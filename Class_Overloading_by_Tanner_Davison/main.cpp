@@ -7,6 +7,7 @@
 #include "ExampleTemplate.h"
 
 template <typename T>
+<<<<<<< HEAD
 std::vector<T> addTwoArrays(const std::vector<T> arrOne, const std::vector<T>& arrTwo) {
 	int _SIZE = (arrOne.size() > arrTwo.size()) ? arrOne.size() : arrTwo.size();
 	std::vector<T> temp(_SIZE);
@@ -21,6 +22,15 @@ std::vector<T> addTwoArrays(const std::vector<T> arrOne, const std::vector<T>& a
 			temp[i] = (arrOne[i] + arrTwo[i]);
 		}
 
+=======
+class CharClass {
+public:
+	explicit CharClass(T memberP = 0);
+	~CharClass() = default;
+	void setMember(const T& memberP);
+	T getMember()const {
+		return this->member;
+>>>>>>> 37746ea33723a3b4b8a88fe32355e7ecf76216dd
 	}
 	return temp;
 }
@@ -91,6 +101,21 @@ int main() {
 	std::cout << smallestMembers(*myPtr);
 
 
+<<<<<<< HEAD
 	std::cout << "\n--------END OF PROGRAM--------" << endl;
+=======
+	allpairs.reserve(allnames.size());
+for (int i = 0; i < allnames.size(); ++i) {
+		allpairs.emplace_back(i, allnames[i]);
+	}
+
+	for (const auto& pair : allpairs) {
+		std::cout << "Index: " << pair.first << ", Name: " << pair.second << std::endl;
+	}
+
+
+
+	std::cout << "--------END OF PROGRAM--------" << endl;
+>>>>>>> 37746ea33723a3b4b8a88fe32355e7ecf76216dd
 	return 1;
 }
