@@ -164,6 +164,7 @@
     <ClInclude Include="Family.h" />
     <ClInclude Include="IBaseInterface.h" />
     <ClInclude Include="InterfaceDerived.h" />
+    <ClInclude Include="M_Temps.h" />
     <ClInclude Include="PlayerCharacter.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Vector2D.h" />
