@@ -22,3 +22,4 @@
 #include "IBaseInterface.h"
 #include "InterfaceDerived.h"
 #include "M_Temps.h"
+#include "Friend_Class_Templates.h"

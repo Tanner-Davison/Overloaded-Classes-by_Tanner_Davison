@@ -162,6 +162,7 @@
     <ClInclude Include="Entity.h" />
     <ClInclude Include="ExampleTemplate.h" />
     <ClInclude Include="Family.h" />
+    <ClInclude Include="Friend_Class_Templates.h" />
     <ClInclude Include="IBaseInterface.h" />
     <ClInclude Include="InterfaceDerived.h" />
     <ClInclude Include="M_Temps.h" />
