@@ -1,4 +1,6 @@
 
+#include <limits>
+
 #include "stdafx.h"
 #include "Base.h"
 #include "Derived.h"
@@ -52,7 +54,7 @@ int main() {
 	std::cout << '"' << is.str() << "\" parsed as: "
 		<< std::boolalpha << b1 << ' ' << b2 << '\n';
 	std::cout << "\n--------END OF PROGRAM--------" << endl;
-
+	std::cout << "\n Testing" ;
 	const Bank<string, double> tanners{"Tanner",100.00};
 	cout << tanners;
 	return 1;
