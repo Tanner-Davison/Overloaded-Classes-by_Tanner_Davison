@@ -13,21 +13,23 @@
 #include <utility>
 
 
-template<typename T=string, typename T1=double>
+template<typename T = string, typename T1 = double >
 class Bank
 {
 public:
-	explicit Bank(T nameP, T1 depositP=0):name(std::move(nameP))
+	explicit Bank(T nameP, T1 depositP = 0) :name(std::move(nameP))
 	{
+
 		deposit.insert(deposit.begin(), depositP);
-		std::cout<< "Bank Created for: " << name << " Starting with: ";
-		for(T1 num: deposit)
-		{
-			std::cout<< "$" << num << endl;
-		}
+		std::cout << "Bank Created for: " << name << std::endl;
+		std::cout << "Initial Deposit: $" << depositP << std::endl;
 	};
 
-	// void make_deposit();
+public:
+	void make_deposit(T1 valueP) {
+		deposit.insert(deposit.begin(), valueP);
+		std::cout << "Deposit Received: $" << valueP << "\n";
+	};
 	// void read_deposits();
 	// T get_total();
 
@@ -35,28 +37,38 @@ public:
 	std::vector<T1> deposit;
 	T name;
 };
-template <typename T=double, typename T1=string>
-inline std::ostream& operator<<(std::ostream& output, const Bank<T,T1>& bankP)
+template <typename T>
+T addArrayValues(const vector<T>& arrayP) {
+	T temp = 0;
+	for (int i = 0; i < arrayP.size(); i++) {
+		temp += arrayP[i];
+	}
+	if (temp > 0) {
+		return temp;
+	}
+	else {
+		return 0;
+	}
+}
+template <typename T = double, typename T1 = string>
+inline std::ostream& operator<<(std::ostream& output, const Bank<T, T1>& bankP)
 {
-	output << bankP.name << " Total Worth: " << bankP.deposit[0]<<endl;
+	output << bankP.name << " Total Worth: $" << addArrayValues<double>(bankP.deposit) << std::endl;
 	return output;
 }
 int main() {
 
-	std::cout << "MAX VALUE FOR INT: " << std::numeric_limits<int>::max() << std::endl;
-	std::cout << "MAX LIMIT OF INT: " << INT_MAX << std::endl;
 
-	std::cout << std::boolalpha;
-	std::cout << "Is INT signed? " << std::numeric_limits<int>::is_signed << std::endl;
-	bool b1, b2;
-	std::istringstream is("true false");
-	is >> std::boolalpha >> b1 >> b2;
-	std::cout << '"' << is.str() << "\" parsed as: "
-		<< std::boolalpha << b1 << ' ' << b2 << '\n';
-	std::cout << "\n--------END OF PROGRAM--------" << endl;
-	std::cout << "\n Testing" ;
-	const Bank<string, double> tanners{"Tanner",100.00};
-	cout << tanners;
+	const vector<double> myvec{ 100.00, 200.00,500.00, 800.00 };
+
+	Bank<string, double> tanners("Tanner", 100.00);
+
+	for (int i = 0; i < myvec.size(); i++) {
+
+		tanners.make_deposit(myvec[i]);
+	}
+	std::cout << tanners;
+
 	return 1;
 }
 

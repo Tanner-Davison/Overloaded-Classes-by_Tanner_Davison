@@ -135,5 +135,8 @@ template <typename T>
 T smallestMembers(const Pairs<T>* pairP) {
 	return pairP->first < pairP->second ? pairP->first : pairP->second;
 }
-
+template <typename T, typename T1>
+T smallest(T x, T1 y) {
+	return(x < y ? x : y);
+}
 
