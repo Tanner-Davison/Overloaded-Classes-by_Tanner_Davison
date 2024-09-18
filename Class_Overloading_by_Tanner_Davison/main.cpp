@@ -43,9 +43,7 @@ public:
 		this->total = addArrayValues<T1>(deposit);
 		std::cout << "Multiple Deposits Total: " << totalDeposits << "\n";
 	}
-	// T get_total();
 
-	// T total = get_total();
 	std::vector<T1> deposit;
 	T1 total;
 	T name;
