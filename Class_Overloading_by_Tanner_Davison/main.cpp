@@ -36,14 +36,13 @@ public:
 		this->total = addArrayValues<T1>(deposit);
 	}
 	void make_multiple_deposits(const vector<T1>& valueArrP) {
-		for (int i = 0; i < valueArrP.size(); i++) {
+		for (int i = 0; i < valueArrP.sze(); i++) {
 			deposit.insert(deposit.begin(), valueArrP[i]);
 		}
 		T1 totalDeposits = addArrayValues<T1>(valueArrP);
 		this->total = addArrayValues<T1>(deposit);
 		std::cout << "Multiple Deposits Total: " << totalDeposits << "\n";
 	}
-
 	std::vector<T1> deposit;
 	T1 total;
 	T name;
