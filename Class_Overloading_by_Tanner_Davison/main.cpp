@@ -12,7 +12,19 @@
 #include <sstream>
 #include <utility>
 
-
+template <typename T>
+T addArrayValues(const vector<T>& arrayP) {
+	T temp = 0;
+	for (int i = 0; i < arrayP.size(); i++) {
+		temp += arrayP[i];
+	}
+	if (temp > 0) {
+		return temp;
+	}
+	else {
+		return 0;
+	}
+}
 template<typename T = string, typename T1 = double >
 class Bank
 {
@@ -48,19 +60,7 @@ public:
 	T1 total;
 	T name;
 };
-template <typename T>
-T addArrayValues(const vector<T>& arrayP) {
-	T temp = 0;
-	for (int i = 0; i < arrayP.size(); i++) {
-		temp += arrayP[i];
-	}
-	if (temp > 0) {
-		return temp;
-	}
-	else {
-		return 0;
-	}
-}
+
 template <typename T = double, typename T1 = string>
 inline std::ostream& operator<<(std::ostream& output, const Bank<T, T1>& bankP)
 {
