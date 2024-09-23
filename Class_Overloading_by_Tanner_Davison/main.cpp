@@ -12,41 +12,6 @@
 #include <sstream>
 #include <utility>
 
-
-template<typename T = string, typename T1 = double >
-class Bank
-{
-public:
-	explicit Bank(T nameP, T1 depositP = 0) :name(std::move(nameP))
-	{
-		std::cout << "Bank Member: " << name << std::endl;
-		this->make_single_deposit(depositP);
-	};
-
-public:
-	void make_single_deposit(T1 valueP) {
-
-		deposit.insert(deposit.begin(), valueP);
-		if (deposit.size() <= 1) {
-			std::cout << "Initial Deposit: $" << valueP << "\n";
-		}
-		else {
-			std::cout << "Deposited: $" << valueP << "\n";
-		}
-		this->total = addArrayValues<T1>(deposit);
-	}
-	void make_multiple_deposits(const vector<T1>& valueArrP) {
-		for (int i = 0; i < valueArrP.sze(); i++) {
-			deposit.insert(deposit.begin(), valueArrP[i]);
-		}
-		T1 totalDeposits = addArrayValues<T1>(valueArrP);
-		this->total = addArrayValues<T1>(deposit);
-		std::cout << "Multiple Deposits Total: " << totalDeposits << "\n";
-	}
-	std::vector<T1> deposit;
-	T1 total;
-	T name;
-};
 template <typename T>
 T addArrayValues(const vector<T>& arrayP) {
 	T temp = 0;
@@ -60,6 +25,40 @@ T addArrayValues(const vector<T>& arrayP) {
 		return 0;
 	}
 }
+template<typename T = string, typename T1 = double >
+class Bank
+{
+public:
+	explicit Bank(T nameP, T1 depositP = 0) :name(std::move(nameP))
+	{
+		std::cout << "Bank Member: " << name << std::endl;
+		this->make_single_deposit(depositP);
+	};
+
+	void make_single_deposit(T1 valueP) {
+
+		deposit.insert(deposit.begin(), valueP);
+		if (deposit.size() <= 1) {
+			std::cout << "Initial Deposit: $" << valueP << "\n";
+		}
+		else {
+			std::cout << "Deposited: $" << valueP << "\n";
+		}
+		this->total = addArrayValues<T1>(deposit);
+	}
+	void make_multiple_deposits(const vector<T1>& valueArrP) {
+		for (int i = 0; i < valueArrP.size(); i++) {
+			deposit.insert(deposit.begin(), valueArrP[i]);
+		}
+		T1 totalDeposits = addArrayValues<T1>(valueArrP);
+		this->total = addArrayValues<T1>(deposit);
+		std::cout << "Multiple Deposits Total: " << totalDeposits << "\n";
+	}
+	std::vector<T1> deposit;
+	T1 total;
+	T name;
+};
+
 template <typename T = double, typename T1 = string>
 inline std::ostream& operator<<(std::ostream& output, const Bank<T, T1>& bankP)
 {
