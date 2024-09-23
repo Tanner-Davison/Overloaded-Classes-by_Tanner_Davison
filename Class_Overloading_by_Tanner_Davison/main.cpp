@@ -35,7 +35,6 @@ public:
 		this->make_single_deposit(depositP);
 	};
 
-public:
 	void make_single_deposit(T1 valueP) {
 
 		deposit.insert(deposit.begin(), valueP);
@@ -55,7 +54,6 @@ public:
 		this->total = addArrayValues<T1>(deposit);
 		std::cout << "Multiple Deposits Total: " << totalDeposits << "\n";
 	}
-
 	std::vector<T1> deposit;
 	T1 total;
 	T name;
@@ -67,16 +65,54 @@ inline std::ostream& operator<<(std::ostream& output, const Bank<T, T1>& bankP)
 	output << bankP.name << " Total Worth: $" << bankP.total << std::endl;
 	return output;
 }
+
+class TestingBase {
+public:
+	virtual ~TestingBase() {};
+	virtual void toString() const {
+		std::cout << "testing base " << std::endl;
+	}
+};
+class TestingDerived : public TestingBase {
+public:
+	~TestingDerived() {};
+	virtual void toString() const override {
+		std::cout << "Printing from testing Base" << std::endl;
+	}
+};
+template<typename T = int, int size = 1>
+class MyContainer {
+public:
+	T& operator[](int index) {
+		return m_Array[index];
+	}
+private:
+	T m_Array[size]{};
+};
 int main() {
 
 
-	const vector<double> myvec{ 100.00, 200.00,500.00, 800.00 };
+	/*const vector<double> myvec{ 100.00, 200.00,500.00, 800.00 };
 
 	Bank<string, double> tanners("Tanner", 100.00);
 
 	tanners.make_multiple_deposits(myvec);
 
-	std::cout << tanners;
+	std::cout << tanners;*/
+
+
+	const int SIZE = 5;
+	MyContainer<TestingBase*, SIZE> container1;
+	TestingBase mainBase;
+	TestingDerived derived1, derived2;
+
+	container1[0] = &derived1;
+	container1[1] = &mainBase;
+	container1[2] = &derived2;
+
+	for (int i = 0; i < SIZE; i++) {
+		container1[i]->toString();
+	}
 
 	return 1;
 }
