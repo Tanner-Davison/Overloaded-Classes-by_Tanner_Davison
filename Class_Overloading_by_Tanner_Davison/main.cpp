@@ -34,7 +34,6 @@ public:
 		std::cout << "Bank Member: " << name << std::endl;
 		this->make_single_deposit(depositP);
 	};
-
 	void make_single_deposit(T1 valueP) {
 
 		deposit.insert(deposit.begin(), valueP);
