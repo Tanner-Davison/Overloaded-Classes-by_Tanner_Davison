@@ -68,15 +68,15 @@ inline std::ostream& operator<<(std::ostream& output, const Bank<T, T1>& bankP)
 
 class TestingBase {
 public:
-	virtual ~TestingBase() {};
+	virtual ~TestingBase() = default;
 	virtual void toString() const {
 		std::cout << "testing base " << std::endl;
 	}
 };
-class TestingDerived : public TestingBase {
+class TestingDerived final : public TestingBase {
 public:
-	~TestingDerived() {};
-	virtual void toString() const override {
+	~TestingDerived() override = default;
+	void toString() const override {
 		std::cout << "Printing from testing Base" << std::endl;
 	}
 };
@@ -89,7 +89,23 @@ public:
 private:
 	T m_Array[size]{};
 };
+template <typename T, int size>
+class FixedArray
+{
+public:
+	void print() const
+	{
+		for(int i=0; i<size; i++)
+		{
+			std::cout << data[i] << " " << std::endl;
+		}
+		std::cout << std::endl;
+	}
+
+	T data[size];
+};
 int main() {
+
 
 
 	/*const vector<double> myvec{ 100.00, 200.00,500.00, 800.00 };
@@ -99,9 +115,9 @@ int main() {
 	tanners.make_multiple_deposits(myvec);
 
 	std::cout << tanners;*/
+	constexpr int SIZE = 5;
+	const FixedArray<std::string, SIZE> myFixedArray = {{"hello", "goodbye", "noway", "goodJob" , "Tanner"}};
 
-
-	const int SIZE = 5;
 	MyContainer<TestingBase*, SIZE> container1;
 	TestingBase mainBase;
 	TestingDerived derived1, derived2;
@@ -110,9 +126,13 @@ int main() {
 	container1[1] = &mainBase;
 	container1[2] = &derived2;
 
-	for (int i = 0; i < SIZE; i++) {
+	for (int i = 0; i <3; i++) {
 		container1[i]->toString();
 	}
+
+		myFixedArray.print();
+
+
 
 	return 1;
 }
