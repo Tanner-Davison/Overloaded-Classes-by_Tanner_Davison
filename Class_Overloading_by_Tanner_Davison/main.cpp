@@ -28,6 +28,7 @@ T addArrayValues(const vector<T>& arrayP) {
 template<typename T = string, typename T1 = double >
 class Bank
 {
+
 public:
 	explicit Bank(T nameP, T1 depositP = 0) :name(std::move(nameP))
 	{
@@ -45,6 +46,7 @@ public:
 		}
 		this->total = addArrayValues<T1>(deposit);
 	}
+
 	void make_multiple_deposits(const vector<T1>& valueArrP) {
 		for (int i = 0; i < valueArrP.size(); i++) {
 			deposit.insert(deposit.begin(), valueArrP[i]);
@@ -94,7 +96,7 @@ class FixedArray
 public:
 	void print() const
 	{
-		for(int i=0; i<size; i++)
+		for (int i = 0; i < size; i++)
 		{
 			std::cout << data[i] << " " << std::endl;
 		}
@@ -115,7 +117,7 @@ int main() {
 
 	std::cout << tanners;*/
 	constexpr int SIZE = 5;
-	const FixedArray<std::string, SIZE> myFixedArray = {{"hello", "goodbye", "noway", "goodJob" , "Tanner"}};
+	const FixedArray<std::string, SIZE> myFixedArray = { {"hello", "goodbye", "noway", "goodJob" , "Tanner"} };
 
 	MyContainer<TestingBase*, SIZE> container1;
 	TestingBase mainBase;
@@ -125,11 +127,11 @@ int main() {
 	container1[1] = &mainBase;
 	container1[2] = &derived2;
 
-	for (int i = 0; i <3; i++) {
+	for (int i = 0; i < 3; i++) {
 		container1[i]->toString();
 	}
 
-		myFixedArray.print();
+	myFixedArray.print();
 
 
 
