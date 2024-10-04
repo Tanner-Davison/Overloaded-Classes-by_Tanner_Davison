@@ -29,8 +29,6 @@ template<typename T = string, typename T1 = double >
 class Bank
 {
 
-
-
 public:
 	explicit Bank(T nameP, T1 depositP = 0) :name(std::move(nameP))
 	{
