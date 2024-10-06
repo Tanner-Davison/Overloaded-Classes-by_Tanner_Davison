@@ -1,6 +1,5 @@
 
 #include <limits>
-
 #include "stdafx.h"
 #include "Base.h"
 #include "Derived.h"
