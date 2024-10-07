@@ -104,8 +104,69 @@ public:
 
 	T data[size];
 };
+
+class SomeBase
+{
+public:
+	SomeBase(){};
+	virtual ~SomeBase(){};
+
+	virtual void toString()
+	{
+		std::cout << "Base::toString()."<< std::endl;
+	}
+};
+class DerivedSome : public SomeBase
+{
+public:
+	DerivedSome() = default;
+	virtual ~DerivedSome(){};
+	virtual void toString() const
+	{
+		std::cout << "Derived::toString()" << std::endl;
+	}
+	int getMember()
+	{
+		return member;
+	}
+private:
+	int member{5};
+};
+
+void displayPtr(SomeBase* basePtr)
+{
+	DerivedSome* ptr = dynamic_cast<DerivedSome*>(basePtr);
+
+	if(ptr)
+	{
+		std::cout << ptr->getMember() << std::endl;
+	}else
+	{
+		std::cout << "nullptr" << std::endl;
+	}
+}
+void displayRef(SomeBase& baseRef)
+{
+	DerivedSome& refBase = dynamic_cast<DerivedSome&>(baseRef);
+	DerivedSome* refBasePtr = dynamic_cast<DerivedSome*>(&refBase);
+
+	if(refBasePtr)
+	{
+		std::cout << "Derived Part of Base Member: " << refBasePtr->getMember() << std::endl;
+
+	}else
+	{
+		std::cout << "Nullptr" << std::endl;
+	}
+}
 int main() {
 
+	SomeBase* basePtr = new DerivedSome;
+	DerivedSome derivedRef{};
+	DerivedSome& derivedRefPtr = derivedRef;
+
+	displayPtr(basePtr);
+	displayRef(derivedRefPtr);
 
 
 	/*const vector<double> myvec{ 100.00, 200.00,500.00, 800.00 };
@@ -115,26 +176,11 @@ int main() {
 	tanners.make_multiple_deposits(myvec);
 
 	std::cout << tanners;*/
-	constexpr int SIZE = 5;
-	const FixedArray<std::string, SIZE> myFixedArray = { {"hello", "goodbye", "noway", "goodJob" , "Tanner"} };
-
-	MyContainer<TestingBase*, SIZE> container1;
-	TestingBase mainBase;
-	TestingDerived derived1, derived2;
-
-	container1[0] = &derived1;
-	container1[1] = &mainBase;
-	container1[2] = &derived2;
-
-	for (int i = 0; i < 3; i++) {
-		container1[i]->toString();
-	}
-
-	myFixedArray.print();
 
 
 
-	return 1;
+
+
 }
 
 
