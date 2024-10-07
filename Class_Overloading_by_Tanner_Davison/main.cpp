@@ -10,6 +10,7 @@
 #include "Friend_Class_Templates.h"
 #include <sstream>
 #include <utility>
+#include <typeinfo>
 
 template <typename T>
 T addArrayValues(const vector<T>& arrayP) {
@@ -108,19 +109,19 @@ public:
 class SomeBase
 {
 public:
-	SomeBase(){};
-	virtual ~SomeBase(){};
+	SomeBase() {};
+	virtual ~SomeBase() {};
 
 	virtual void toString()
 	{
-		std::cout << "Base::toString()."<< std::endl;
+		std::cout << "Base::toString()." << std::endl;
 	}
 };
 class DerivedSome : public SomeBase
 {
 public:
 	DerivedSome() = default;
-	virtual ~DerivedSome(){};
+	virtual ~DerivedSome() {};
 	virtual void toString() const
 	{
 		std::cout << "Derived::toString()" << std::endl;
@@ -130,17 +131,18 @@ public:
 		return member;
 	}
 private:
-	int member{5};
+	int member{ 5 };
 };
 
 void displayPtr(SomeBase* basePtr)
 {
 	DerivedSome* ptr = dynamic_cast<DerivedSome*>(basePtr);
 
-	if(ptr)
+	if (ptr)
 	{
 		std::cout << ptr->getMember() << std::endl;
-	}else
+	}
+	else
 	{
 		std::cout << "nullptr" << std::endl;
 	}
@@ -150,36 +152,96 @@ void displayRef(SomeBase& baseRef)
 	DerivedSome& refBase = dynamic_cast<DerivedSome&>(baseRef);
 	DerivedSome* refBasePtr = dynamic_cast<DerivedSome*>(&refBase);
 
-	if(refBasePtr)
+	if (refBasePtr)
 	{
 		std::cout << "Derived Part of Base Member: " << refBasePtr->getMember() << std::endl;
 
-	}else
+	}
+	else
 	{
 		std::cout << "Nullptr" << std::endl;
 	}
 }
-int main() {
+class A
+{
+public:
+	virtual ~A() {};
+	virtual void toString() const
+	{
+		std::cout << "Base::toString()" << std::endl;
+	}
+};
+class B : public A {};
+class C : public A {};
+class D
+{
+public:
+	D() = default;
+	virtual ~D() {};
+	virtual void toString()
+	{
+		std::cout << "::toString() from class D" << std::endl;
+	}
+};
+class E : public B, public C, public D {};
 
-	SomeBase* basePtr = new DerivedSome;
-	DerivedSome derivedRef{};
-	DerivedSome& derivedRefPtr = derivedRef;
+int main()
+{
+	D* pD = new E;
 
-	displayPtr(basePtr);
-	displayRef(derivedRefPtr);
+	A* pA = dynamic_cast<A*>(pD);
+
+	if (pA == nullptr)
+	{
+		std::cout << "nullpointer" << std::endl;
+	}
+	else
+	{
+		std::cout << "not empty" << std::endl;
+	}
+	// downcast followed by upcasting;
+	E* pE = dynamic_cast<E*>(pD);
+	B* pB = dynamic_cast<B*>(pE);
+	A* pA2 = dynamic_cast<A*>(pB);
+	if (pA2 != nullptr)
+	{
+		pA2->toString();
+		std::cout << "from pA2!" << std::endl;
+	}
+	// cross casting
+	B* pB2 = dynamic_cast<B*>(pD);
+	A* pA3 = dynamic_cast<A*> (pB2);
+	if (pA3 != nullptr)
+	{
+		pA3->toString();
+		std::cout << "from pA3!" << std::endl;
+	}
 
 
-	/*const vector<double> myvec{ 100.00, 200.00,500.00, 800.00 };
+	int* x{}, y{};
+	A entity{};
+	A entity2{};
 
-	Bank<string, double> tanners("Tanner", 100.00);
+	const A* const ptr1{};
 
-	tanners.make_multiple_deposits(myvec);
+	A* const ptr2{};
+	A* ptr3 = new A;
+	std::cout << "Types..." << std::endl;
 
-	std::cout << tanners;*/
+	std::cout << "x: " << typeid(x).name() << std::endl;
+	std::cout << "y: " << typeid(y).name() << std::endl;
+	std::cout << "A : " << typeid(entity).name() << std::endl;
+	std::cout << "A : " << typeid(entity2).name() << std::endl;
+
+	std::cout << "ptr1: " << typeid(ptr1).name() << std::endl;
+	std::cout << "ptr2: " << typeid(ptr2).name() << std::endl;
+	std::cout << "ptr3-> " << typeid(*ptr3).name() << std::endl;
 
 
+	delete pD;
+	std::cout << "\n ----END PROGRAM ------" << std::endl;
 
-
+	return 0;
 
 }
 
