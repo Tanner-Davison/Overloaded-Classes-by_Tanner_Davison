@@ -11,6 +11,7 @@
 #include <sstream>
 #include <utility>
 #include <typeinfo>
+#include <cstdio>
 
 template <typename T>
 T addArrayValues(const vector<T>& arrayP) {
@@ -25,6 +26,7 @@ T addArrayValues(const vector<T>& arrayP) {
 		return 0;
 	}
 }
+
 template<typename T = string, typename T1 = double >
 class Bank
 {
@@ -185,6 +187,13 @@ public:
 };
 class E : public B, public C, public D {};
 
+int constNum(const int& num) {
+	int& modifiableNum = const_cast<int&>(num);
+	modifiableNum = 1200;
+	std::cout << modifiableNum << std::endl;
+	return num;
+}
+
 int main()
 {
 	D* pD = new E;
@@ -199,6 +208,7 @@ int main()
 	{
 		std::cout << "not empty" << std::endl;
 	}
+
 	// downcast followed by upcasting;
 	E* pE = dynamic_cast<E*>(pD);
 	B* pB = dynamic_cast<B*>(pE);
@@ -218,25 +228,17 @@ int main()
 	}
 
 
-	int* x{}, y{};
-	A entity{};
-	A entity2{};
+	const char* tanner = "Tanner";
+	char testing[8] = "Testing";
+	char name[] = { 'T','A','N','N','E','R','\0' };
+	printf("%s\n", testing);
 
-	const A* const ptr1{};
+	const int x = 100;
 
-	A* const ptr2{};
-	A* ptr3 = new A;
-	std::cout << "Types..." << std::endl;
+	int y = constNum(x);
 
-	std::cout << "x: " << typeid(x).name() << std::endl;
-	std::cout << "y: " << typeid(y).name() << std::endl;
-	std::cout << "A : " << typeid(entity).name() << std::endl;
-	std::cout << "A : " << typeid(entity2).name() << std::endl;
 
-	std::cout << "ptr1: " << typeid(ptr1).name() << std::endl;
-	std::cout << "ptr2: " << typeid(ptr2).name() << std::endl;
-	std::cout << "ptr3-> " << typeid(*ptr3).name() << std::endl;
-
+	std::cout << "Return Value: " << x << std::endl;
 
 	delete pD;
 	std::cout << "\n ----END PROGRAM ------" << std::endl;
