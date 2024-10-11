@@ -211,6 +211,11 @@ private:
 	int member;
 };
 
+int& GetValue() {
+	static int value = 100;
+	return value;
+}
+
 int main()
 {
 	D* pD = new E;
@@ -225,6 +230,9 @@ int main()
 	{
 		std::cout << "not empty" << std::endl;
 	}
+
+	int myNum = GetValue() = 10;
+	std::cout << "HERE" << myNum << std::endl;
 
 	// downcast followed by upcasting;
 	E* pE = dynamic_cast<E*>(pD);
@@ -264,6 +272,7 @@ int main()
 	int* ptr = const_cast<int*>(vPtr);
 
 	int temp = constNum(xyz);
+
 
 
 	std::cout << typeid(vPtr).name() << std::endl;
