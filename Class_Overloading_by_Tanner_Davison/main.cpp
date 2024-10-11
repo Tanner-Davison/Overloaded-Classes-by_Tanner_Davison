@@ -187,12 +187,29 @@ public:
 };
 class E : public B, public C, public D {};
 
+// A function that takes in a constant reference and modifies it using const_cast
 int constNum(const int& num) {
+	// Remove const-ness from 'num' to allow modification
 	int& modifiableNum = const_cast<int&>(num);
-	modifiableNum = 1200;
-	std::cout << modifiableNum << std::endl;
-	return num;
+	modifiableNum = 1200; // Dangerous: Modifying a const variable
+	std::cout << "Modified Value: " << modifiableNum << std::endl;
+	return num; // This returns the (potentially unchanged) original value
 }
+//modifies the const out of a constant object ->
+class ConstantClass {
+public:
+	ConstantClass(int memberP = 0) :member(memberP)
+	{ }
+	void ModifyMemberConst(const int intP) const {
+		(const_cast<ConstantClass*>(this))->member = intP;
+	}
+	void toString()const {
+		std::cout << this->member << std::endl;
+	}
+
+private:
+	int member;
+};
 
 int main()
 {
@@ -228,17 +245,28 @@ int main()
 	}
 
 
-	const char* tanner = "Tanner";
+	/*const char* tanner = "Tanner";*/
 	char testing[8] = "Testing";
 	char name[] = { 'T','A','N','N','E','R','\0' };
 	printf("%s\n", testing);
 
 	const int x = 100;
-
 	int y = constNum(x);
+	std::cout << "Return Value: " << y << std::endl;
+	std::cout << "Original Value of x: " << x << std::endl;// x may or may not be changed depending on how it was declared
+	const ConstantClass test{ 800 };
+	test.toString();// prints 800
+	test.ModifyMemberConst(100);
+	test.toString(); // prints 100
+
+	int xyz{ 250 };
+	volatile int* vPtr{ &xyz };
+	int* ptr = const_cast<int*>(vPtr);
+
+	int temp = constNum(xyz);
 
 
-	std::cout << "Return Value: " << x << std::endl;
+	std::cout << typeid(vPtr).name() << std::endl;
 
 	delete pD;
 	std::cout << "\n ----END PROGRAM ------" << std::endl;
@@ -246,7 +274,6 @@ int main()
 	return 0;
 
 }
-
 
 
 
