@@ -215,7 +215,17 @@ int& GetValue() {
 	static int value = 100;
 	return value;
 }
-
+template <typename T>
+void howManyTilZero(const T& pVal) {
+	T count = pVal;
+	T steps = 0;
+	while (count > 0) {
+		std::cout << "Current Count" << count << std::endl;
+		count--;
+		steps++;
+	}
+	std::cout << "Completed in " << steps << " steps" << std::endl;
+}
 int main()
 {
 	D* pD = new E;
@@ -273,7 +283,8 @@ int main()
 
 	int temp = constNum(xyz);
 
-
+	int numSteps = 45.99;
+	howManyTilZero(numSteps);
 
 	std::cout << typeid(vPtr).name() << std::endl;
 
