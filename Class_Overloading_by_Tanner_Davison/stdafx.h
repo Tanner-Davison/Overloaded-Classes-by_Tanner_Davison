@@ -18,3 +18,8 @@
 #include "Base.h"
 #include "Derived.h"
 #include "PlayerCharacter.h"
+#include "ExampleTemplate.h"
+#include "IBaseInterface.h"
+#include "InterfaceDerived.h"
+#include "M_Temps.h"
+#include "Friend_Class_Templates.h"
