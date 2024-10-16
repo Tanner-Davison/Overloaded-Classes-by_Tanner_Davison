@@ -8,13 +8,14 @@
 class Base {
 public:
 	Base();
-	explicit Base(int xP);
+	explicit Base(int xP, int xPrivate=1);
 	virtual ~Base();
 	virtual void toString()const;
-
+	void printPrivateMember()const;
 	string member;
 protected:
 	int x;
+	int* privateMember;
 };
 
 
