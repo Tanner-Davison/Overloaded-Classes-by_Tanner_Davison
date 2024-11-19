@@ -1,4 +1,3 @@
-
 #include <limits>
 #include "stdafx.h"
 #include "Base.h"
@@ -12,7 +11,7 @@
 #include <utility>
 #include <typeinfo>
 #include <cstdio>
-
+//test
 template <typename T>
 T addArrayValues(const vector<T>& arrayP) {
 	T temp = 0;

@@ -42,7 +42,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics"
+					"fragment" : "-g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics"
 				},
 				{
 					"fragment" : "-Winvalid-pch -Xclang -emit-pch -Xclang -include -Xclang /Users/tanner.davison/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch_arm64.hxx -x c++-header"
@@ -73,7 +73,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics"
+					"fragment" : "-g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics"
 				},
 				{
 					"fragment" : "-Winvalid-pch -Xarch_arm64 -include/Users/tanner.davison/CLionProjects/Overloaded-Classes-by_Tanner_Davison/cmake-build-debug/CMakeFiles/my_executable.dir/cmake_pch_arm64.hxx"
