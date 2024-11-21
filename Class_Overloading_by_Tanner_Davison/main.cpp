@@ -11,7 +11,7 @@
 #include <utility>
 #include <typeinfo>
 #include <cstdio>
-//test
+
 template <typename T>
 T addArrayValues(const vector<T>& arrayP) {
 	T temp = 0;
