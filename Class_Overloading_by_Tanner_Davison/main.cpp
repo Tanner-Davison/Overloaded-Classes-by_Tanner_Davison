@@ -25,7 +25,6 @@ T addArrayValues(const vector<T>& arrayP) {
 		return 0;
 	}
 }
-//no stress
 template<typename T = string, typename T1 = double >
 class Bank
 {
